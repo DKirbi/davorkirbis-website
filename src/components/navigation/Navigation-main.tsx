@@ -1,5 +1,5 @@
+import { NavLink, NavLinkRenderProps } from "react-router-dom";
 import { NavLinkGroup } from "./link-components/Navigation-group";
-import { NavigationLink } from "./link-components/NavLink";
 import { Logo } from "./logo/Logo";
 
 export interface NavProps {
@@ -9,7 +9,7 @@ export interface NavProps {
 const NavLinks = [
   {
     name: "ABOUT ME",
-    href: "aboutme",
+    href: "about-me",
   },
   {
     name: "CV",
@@ -22,16 +22,36 @@ const NavLinks = [
   },
 ];
 
+const getNavLinkClassName = (
+  { isActive, isPending }: NavLinkRenderProps,
+  additionalClasses = ""
+) => {
+  let baseClass = "";
+  if (isActive) baseClass = "active";
+  else if (isPending) baseClass = "pending";
+  return `${baseClass} ${additionalClasses}`.trim();
+};
+
 export const NavigationMain: React.FC<NavProps> = () => {
   return (
-    <div className=" flex justify-center bg-slate-400 h-[54px]  fixed left-0 w-full m-auto top-0">
-      <div className="flex justify-between align-middle w-9/12  fixed py-3">
-        <Logo />
-        <NavLinkGroup>
-          {NavLinks.map((navLink, index) => {
-            return <NavigationLink key={index} label={`${navLink.name}`} />;
-          })}
-        </NavLinkGroup>
+    <div className="fixed left-0 w-full top-0">
+      <div className="flex justify-center bg-slate-400 h-[54px]  m-auto ">
+        <div className="flex justify-between align-middle w-9/12   py-3">
+          <Logo linksTo="/" />
+          <NavLinkGroup>
+            {NavLinks.map((navLink, index) => {
+              return (
+                <NavLink
+                  key={index}
+                  to={`${navLink.href}`}
+                  className={(state) => getNavLinkClassName(state, "nav-link")}
+                >
+                  {`${navLink.name}`}
+                </NavLink>
+              );
+            })}
+          </NavLinkGroup>
+        </div>
       </div>
     </div>
   );

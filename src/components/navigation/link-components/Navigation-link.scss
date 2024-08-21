@@ -1,7 +1,17 @@
 .nav-link {
   font-size: 14px;
+  padding: 4px;
 
-  &.hover {
+  &:hover {
     background-color: #932bbc;
+    color: #f5f5f5;
+  }
+  &.active {
+    text-decoration: underline;
+    text-decoration-color: #932bbc;
+    text-decoration-thickness: 3px;
+    &:hover {
+      text-decoration-color: white;
+    }
   }
 }

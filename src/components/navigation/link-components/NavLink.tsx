@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Navigation-link.scss";
 
 export interface NavigationLinkProps {
@@ -19,7 +20,7 @@ export const NavigationLink: React.FC<NavigationLinkProps> = ({
         active ? "isActive" : "isInactive"
       } p-1 text-sm text-neutral-700	 hover:text-neutral-100	 `}
     >
-      <a href={`${hrefName}`}>{label}</a>
+      <Link to={`${hrefName}`}>{label}</Link>
     </li>
   );
 };

@@ -2,14 +2,15 @@
 
 import "./Logo.scss";
 import LogoImage from "../../../assets/Logo.svg?react";
+import { NavLink } from "react-router-dom";
 export interface LogoProps {
-  hrefName?: string;
+  linksTo?: string;
 }
 
-export const Logo: React.FC<LogoProps> = ({ hrefName }) => {
+export const Logo: React.FC<LogoProps> = ({ linksTo }) => {
   return (
-    <a href={`${hrefName}`} className="logo-link">
+    <NavLink to={`${linksTo}`} className="logo-link">
       <LogoImage />
-    </a>
+    </NavLink>
   );
 };
