@@ -1,8 +1,5 @@
-import { GetPhotos } from "../components/getPhotos";
+import FlickrGallery from "../components/getPhotos";
 
 export const Photos = () => {
-    return (
-      <GetPhotos />
-    );
-  };
-  
+  return <FlickrGallery />;
+};
