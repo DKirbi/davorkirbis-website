@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
 import { AboutMe } from "./routes/about-me";
 import { Home } from "./routes/home";
+import { CV } from "./routes/cv";
+import { Photos } from "./routes/photos";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
       {
         path: "about-me",
         element: <AboutMe />,
+      },
+      {
+        path: "cv",
+        element: <CV />,
+      },
+      {
+        path: "photos",
+        element: <Photos />,
       },
     ],
   },
