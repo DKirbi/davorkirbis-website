@@ -1,5 +1,8 @@
+import { GetPhotos } from "../components/getPhotos";
 
 export const Photos = () => {
-    return <div>This is about my Photos now</div>;
+    return (
+      <GetPhotos />
+    );
   };
   
