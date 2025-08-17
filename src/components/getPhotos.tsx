@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import md5 from "md5";
 
 // Interfaces (adjust as needed)
 interface FlickrPhoto {
@@ -8,92 +7,69 @@ interface FlickrPhoto {
   server: string;
   farm: number;
   title: string;
-}
-
-interface FlickrPhotosetPhotosResponse {
-  photoset: {
-    photo: FlickrPhoto[];
-    total: string; // Important: This tells you the total number of photos
-  };
+  link: string;
 }
 
 const FlickrGallery: React.FC = () => {
   const [photos, setPhotos] = useState<FlickrPhoto[]>([]);
-  const apiKey = "e3fb3c13cbd0bb06606b8d81c3d1b1d5";
-  const apiSecret = "fc9987b952ff08b2";
-  const userId = "131679845@N02";
-  const photosetId = "72177720314043367";
-
-  const generateFlickrUrl = (params: { [key: string]: string | number }) => {
-    // ... (same as before)
-  };
-
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   useEffect(() => {
-    const fetchAllPhotos = async () => {
-      if (!photosetId) return;
+    async function getData() {
+      const url =
+        "https://www.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=4118e30be6408bfb2658851603f796d5&gallery_id=66911286-72157647277042064&format=json&nojsoncallback=1";
+      try {
+        const response = await fetch(url);
 
-      let allPhotos: FlickrPhoto[] = [];
-      let currentPage = 1;
+        const result = await response.json();
+        const drilledDownResult = result.photos.photo;
+        console.log(result.photos.photo);
 
-      while (true) {
-        try {
-          const params = {
-            method: "flickr.photosets.getPhotos",
-            api_key: apiKey,
-            photoset_id: photosetId,
-            user_id: userId,
-            format: "json",
-            nojsoncallback: 1,
-            per_page: 500, // Max per page
-            page: currentPage,
-          };
-
-          const flickrUrl = generateFlickrUrl(params);
-          const response = await fetch(flickrUrl);
-          console.log(response);
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-
-          const data: FlickrPhotosetPhotosResponse = await response.json();
-          const currentPhotos = data.photoset.photo;
-
-          allPhotos = allPhotos.concat(currentPhotos);
-
-          const totalPhotos = parseInt(data.photoset.total, 10);
-          const photosReceived = allPhotos.length;
-
-          if (photosReceived >= totalPhotos || currentPhotos.length === 0) {
-            break; // All photos retrieved
-          }
-
-          currentPage++;
-        } catch (error) {
-          console.error("Error fetching photos:", error);
-          return; // Stop fetching on error
-        }
+        setLoading(true);
+        setError(null);
+        setPhotos(drilledDownResult);
+      } catch (error: unknown) {
+        const message =
+          error instanceof Error
+            ? error.message
+            : "Unknown error fetching photos";
+        console.error(message);
+        setError(message);
+        setPhotos([]);
+      } finally {
+        setLoading(false);
       }
-      setPhotos(allPhotos);
-    };
+    }
 
-    fetchAllPhotos();
-  }, [photosetId]);
+    getData();
+  }, []);
 
-  const generateFlickrPhotoUrl = (photo: FlickrPhoto) => {
-    // ... (same as before)
+  /* Way images are generated:
+https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
+	or
+https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}_[mstzb].jpg
+	or
+https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{o-secret}_o.(jpg|gif|png)
+*/
+
+  const buildPhotoUrl = (p: FlickrPhoto) => {
+    // Every statement needs their own return
+    return `https://farm${p.farm}.staticflickr.com/${p.server}/${p.id}_${p.secret}.jpg`;
   };
+
+  if (loading) return <div> Loading Photos ...</div>;
+
+  if (error) return <div> Error loading photos: {error}</div>;
 
   return (
     <div>
-      {photos.map((photo) => (
-        <img
-          key={photo.id}
-          src={generateFlickrPhotoUrl(photo)}
-          alt={photo.title || "Flickr Photo"}
-        />
+      {photos.map((photo, index) => (
+        <div>
+          <img src={buildPhotoUrl(photo)} alt={photo.title} key={index} />
+          {photo.title}
+        </div>
       ))}
     </div>
   );
 };
-
 export default FlickrGallery;
