@@ -37,7 +37,7 @@ export const NavigationMain: React.FC<NavProps> = () => {
     <div className="fixed left-0 w-full top-0 z-[999]">
       <div className="flex justify-center h-[54px]  m-auto ">
         <div className="flex justify-between align-middle w-9/12   py-3">
-          <Logo linksTo="/" />
+          <Logo linksTo="/about-me" />
           <NavLinkGroup>
             {NavLinks.map((navLink, index) => {
               return (

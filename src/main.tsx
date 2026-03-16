@@ -1,7 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.scss";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 import Root from "./routes/root";
 import { AboutMe } from "./routes/about-me";
 import { Home } from "./routes/home";
@@ -14,7 +18,11 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       {
-        path: "/",
+        index: true,
+        element: <Navigate to="about-me" replace />,
+      },
+      {
+        path: "home",
         element: <Home />,
       },
       {
