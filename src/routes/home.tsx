@@ -1,5 +1,4 @@
 import Avatar from "../assets/Myself.png";
-import "./home.scss";
 
 export const Home = () => {
   return (

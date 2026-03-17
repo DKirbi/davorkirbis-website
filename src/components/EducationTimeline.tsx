@@ -7,7 +7,6 @@ export function EducationTimeline() {
       {education.map((item) => (
         <TimelineEntry
           key={item.id}
-          id={item.id}
           title={item.school}
           subtitle={item.degree}
           period={item.period}

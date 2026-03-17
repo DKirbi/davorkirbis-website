@@ -1,17 +1,35 @@
-import Avatar from "../assets/Myself.png";
-import "./about-me.scss";
-import { Blockquote } from "@mantine/core";
+import { ActionIcon, Blockquote } from "@mantine/core";
+import { IconBrandFlickr, IconBrandGithubFilled, IconBrandLinkedin, IconMailFilled } from "@tabler/icons-react";
+import Avatar from "../assets/Me3.jpeg";
 
 export const AboutMe = () => {
   return (
     <div className="w-10/12 mx-auto pt-16">
       <div className="hero-page flex flex-col md:flex-row justify-center gap-8 ">
-        <div className="flex flex-col gap-10 ">
+        <div className="flex flex-col gap-10 align-middle justify-center">
+          
           <img
             src={`${Avatar}`}
             alt="Me"
-            className="md:h-[300px] md:w-[300px] h-[200px] w-[200px] self-center md:self-start avatar"
+            className="md:h-[300px] md:w-[auto] h-[200px] w-[auto] self-center rounded-xl object-cover saturate-[0.1] hover:saturate-100 transition-all duration-300"
           />
+          <div className="icons-container flex flex-row gap-4 justify-center">
+          <ActionIcon size="lg" variant="filled" color="cyan" aria-label="linkedin" onClick={() => window.open('https://www.linkedin.com/in/davor-kadlecek/', '_blank')}>
+      <IconBrandLinkedin style={{ width: '70%', height: '70%' }} stroke={1.5}  />
+    </ActionIcon>
+          <ActionIcon size="lg" variant="filled" color="cyan" aria-label="flickr" onClick={() => window.open('https://www.flickr.com/photos/davorkirbis/', '_blank')}>
+      <IconBrandFlickr style={{ width: '70%', height: '70%' }} stroke={1.5} />
+    </ActionIcon>
+          <ActionIcon size="lg" variant="filled" color="cyan" aria-label="github" onClick={() => window.open('https://github.com/DKirbi', '_blank')}>
+      <IconBrandGithubFilled style={{ width: '70%', height: '70%' }} stroke={1.5} />
+    </ActionIcon>
+          <ActionIcon size="lg" variant="filled" color="cyan" aria-label="email" onClick={() => { window.location.href = 'mailto:davor.kirbis@gmail.com'; }}>
+      <IconMailFilled style={{ width: '70%', height: '70%' }} stroke={1.5} />
+    </ActionIcon>
+            
+
+            
+          </div>
          <Blockquote color="cyan" mt="xl" className="hidden md:block ">
          Outside of work, I enjoy photography — I shoot with a Sony Alpha 6000 and a growing collection of APS-C lenses. I also like bouldering, gaming, and these days I spend a lot of my free time exploring the world together with my one-year-old daughter.
     </Blockquote>

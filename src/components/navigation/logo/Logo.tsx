@@ -1,6 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
 
-import "./Logo.scss";
 import LogoImage from "../../../assets/Logo.svg?react";
 import { NavLink } from "react-router-dom";
 export interface LogoProps {

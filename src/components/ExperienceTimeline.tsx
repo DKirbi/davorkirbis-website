@@ -7,7 +7,6 @@ export function ExperienceTimeline() {
       {experience.map((item) => (
         <TimelineEntry
           key={item.id}
-          id={item.id}
           title={item.company}
           subtitle={item.role}
           period={item.period}

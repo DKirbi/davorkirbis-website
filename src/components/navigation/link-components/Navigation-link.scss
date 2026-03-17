@@ -1,15 +1,16 @@
 $primary-color: #2b9dbc;
 
 .nav-link {
-  font-size: 14px;
+  font-size: 18px;
   padding: 4px 16px;
   color: #4c4c4c;
+
   &:hover {
     color: $primary-color;
 
   }
   &.active {
-    font-weight: bold;
+    font-weight:  700;
     color: $primary-color;
     
   }

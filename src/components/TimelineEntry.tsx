@@ -1,7 +1,6 @@
 import { Badge, Card, MantineColor } from "@mantine/core";
 
 export type TimelineEntryProps = {
-  id: string;
   title: string;
   subtitle: string;
   period: { start: string; end: string };

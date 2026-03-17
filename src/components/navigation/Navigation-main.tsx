@@ -3,10 +3,6 @@ import { NavLink, NavLinkRenderProps } from "react-router-dom";
 import { NavLinkGroup } from "./link-components/Navigation-group";
 import { Logo } from "./logo/Logo";
 
-export interface NavProps {
-  children?: React.ReactNode;
-}
-
 const NavLinks = [
   {
     name: "ABOUT ME",
@@ -28,7 +24,7 @@ const getNavLinkClassName = (
   return `${baseClass} ${additionalClasses}`.trim();
 };
 
-export const NavigationMain: React.FC<NavProps> = () => {
+export const NavigationMain = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
