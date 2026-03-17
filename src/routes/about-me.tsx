@@ -12,7 +12,7 @@ export const AboutMe = () => {
   return (
     <div className="w-11/12 mx-auto pt-16">
       <div className="hero-page flex flex-col md:flex-row justify-center gap-8 ">
-        <div className="flex flex-col gap-10 align-middle justify-center">
+        <div className="flex flex-col gap-10 align-center">
           <img
             src={`${Avatar}`}
             alt="Me"
@@ -69,17 +69,12 @@ export const AboutMe = () => {
               Download Resume <span className="text-sm"> (1.9 MB .PDF)</span>
             </Button>
           </div>
-
-          <Blockquote color="cyan" mt="xl" className="hidden md:block ">
-            Outside of work, I enjoy photography — I shoot with a Sony Alpha 6000 and a growing
-            collection of APS-C lenses. I also like bouldering, gaming, and these days I spend a lot
-            of my free time exploring the world together with my one-year-old daughter.
-          </Blockquote>
         </div>
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
             <h1 className="text-3xl md:text-5xl md:leading-normal leading-relaxed">
-              I'm <strong>Davor</strong> — <br /> a <strong>UX Engineer</strong>
+              I'm <strong>Davor</strong> — <br className="hidden md:block" /> a{" "}
+              <strong>UX Engineer</strong>
             </h1>
             <h3 className="italic text-base md:text-lg">
               Bridging design and engineering through scalable interfaces and design systems.
@@ -103,7 +98,7 @@ export const AboutMe = () => {
               I'm always happy to walk through challenges and decisions in an interview.
             </strong>
           </p>
-          <Blockquote color="cyan" mt="xl" className="md:hidden block">
+          <Blockquote color="cyan" mt="xl">
             Outside of work, I enjoy photography — I shoot with a Sony Alpha 6000 and a growing
             collection of APS-C lenses. I also like bouldering, gaming, and these days I spend a lot
             of my free time exploring the world together with my one-year-old daughter.
