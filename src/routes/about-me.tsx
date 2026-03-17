@@ -4,7 +4,7 @@ import Avatar from "../assets/Me3.jpeg";
 
 export const AboutMe = () => {
   return (
-    <div className="w-10/12 mx-auto pt-16">
+    <div className="w-11/12 mx-auto pt-16">
       <div className="hero-page flex flex-col md:flex-row justify-center gap-8 ">
         <div className="flex flex-col gap-10 align-middle justify-center">
           
