@@ -1,4 +1,4 @@
-import { ActionIcon, Blockquote, Button } from "@mantine/core";
+import { Blockquote, Button, ThemeIcon } from "@mantine/core";
 import {
   IconBrandFlickr,
   IconBrandGithubFilled,
@@ -20,44 +20,41 @@ export const AboutMe = () => {
           />
           <div className="buttons-wrapper flex flex-col gap-4">
             <div className="icons-container flex flex-row gap-4 justify-center">
-              <ActionIcon
-                size="lg"
-                variant="filled"
-                color="cyan"
-                aria-label="linkedin"
-                onClick={() => window.open("https://www.linkedin.com/in/davor-kadlecek/", "_blank")}
+              <a
+                href="https://www.linkedin.com/in/davorkirbis/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
-                <IconBrandLinkedin style={{ width: "70%", height: "70%" }} stroke={1.5} />
-              </ActionIcon>
-              <ActionIcon
-                size="lg"
-                variant="filled"
-                color="cyan"
-                aria-label="flickr"
-                onClick={() => window.open("https://www.flickr.com/photos/davorkirbis/", "_blank")}
+                <ThemeIcon size="lg" variant="filled" color="cyan">
+                  <IconBrandLinkedin style={{ width: "70%", height: "70%" }} stroke={1.5} />
+                </ThemeIcon>
+              </a>
+              <a
+                href="https://www.flickr.com/photos/davorkirbis/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Flickr"
               >
-                <IconBrandFlickr style={{ width: "70%", height: "70%" }} stroke={1.5} />
-              </ActionIcon>
-              <ActionIcon
-                size="lg"
-                variant="filled"
-                color="cyan"
-                aria-label="github"
-                onClick={() => window.open("https://github.com/DKirbi", "_blank")}
+                <ThemeIcon size="lg" variant="filled" color="cyan">
+                  <IconBrandFlickr style={{ width: "70%", height: "70%" }} stroke={1.5} />
+                </ThemeIcon>
+              </a>
+              <a
+                href="https://github.com/DKirbi"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
               >
-                <IconBrandGithubFilled style={{ width: "70%", height: "70%" }} stroke={1.5} />
-              </ActionIcon>
-              <ActionIcon
-                size="lg"
-                variant="filled"
-                color="cyan"
-                aria-label="email"
-                onClick={() => {
-                  window.location.href = "mailto:davor.kirbis@gmail.com";
-                }}
-              >
-                <IconMailFilled style={{ width: "70%", height: "70%" }} stroke={1.5} />
-              </ActionIcon>
+                <ThemeIcon size="lg" variant="filled" color="cyan">
+                  <IconBrandGithubFilled style={{ width: "70%", height: "70%" }} stroke={1.5} />
+                </ThemeIcon>
+              </a>
+              <a href="mailto:davor.kirbis@gmail.com" aria-label="Email">
+                <ThemeIcon size="lg" variant="filled" color="cyan">
+                  <IconMailFilled style={{ width: "70%", height: "70%" }} stroke={1.5} />
+                </ThemeIcon>
+              </a>
             </div>
             <Button
               className="self-center"
