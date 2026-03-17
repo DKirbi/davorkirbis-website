@@ -1,28 +1,20 @@
-import { useState } from "react";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
 import { EducationTimeline } from "@/components/EducationTimeline";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import { Divider } from "@mantine/core";
 
 export const CV = () => {
-  const [view, setView] = useState("experience");
-
   return (
-    <div>
-      <div className="fixed bottom-3 left-1/2 -translate-x-1/2 z-[1000]">
-        <ToggleGroup
-          type="single"
-          value={view}
-          onValueChange={(value) => {
-            if (value) setView(value);
-          }}
-          variant="outline"
-        >
-          <ToggleGroupItem value="experience">Experience</ToggleGroupItem>
-          <ToggleGroupItem value="education">Education</ToggleGroupItem>
-        </ToggleGroup>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-40 pt-16">
+      <div>
+        <h2 className="text-lg font-semibold mb-2">Experience</h2>
+        <Divider color="cyan" my="sm" size={"md"}/>
+        <ExperienceTimeline />
       </div>
-
-      {view === "experience" ? <ExperienceTimeline /> : <EducationTimeline />}
+      <div>
+        <h2 className="text-lg font-semibold  mb-2">Education</h2>
+        <Divider color="blue" my="sm" size={"md"}/>
+        <EducationTimeline />
+      </div>
     </div>
   );
 };

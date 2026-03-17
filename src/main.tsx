@@ -6,11 +6,14 @@ import {
   Navigate,
   RouterProvider,
 } from "react-router-dom";
+import { MantineProvider } from "@mantine/core";
 import Root from "./routes/root";
 import { AboutMe } from "./routes/about-me";
 import { Home } from "./routes/home";
 import { CV } from "./routes/cv";
 import { Photos } from "./routes/photos";
+import '@mantine/core/styles.css';
+
 
 const router = createBrowserRouter([
   {
@@ -43,6 +46,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <MantineProvider>
+      <RouterProvider router={router} />
+    </MantineProvider>
   </StrictMode>
 );
