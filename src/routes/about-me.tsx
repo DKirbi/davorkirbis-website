@@ -79,37 +79,28 @@ export const AboutMe = () => {
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
             <h1 className="text-3xl md:text-5xl md:leading-normal leading-relaxed">
-              Hello there! My name is <strong>Davor</strong> and I'm a <strong> UX Engineer</strong>
+              I'm <strong>Davor</strong> — <br /> a <strong>UX Engineer</strong>
             </h1>
-
-            <h3 className="italic text-base md:text-lg ">
-              A product designer with a strong love for code.
+            <h3 className="italic text-base md:text-lg">
+              Bridging design and engineering through scalable interfaces and design systems.
             </h3>
           </div>
 
           <p className="text-lg leading-relaxed">
-            Over the past{" "}
-            <strong>10 years working across UX design and frontend engineering</strong>, I've
-            developed a strong intuition for turning design ideas into real, maintainable
-            interfaces.
+            Over <strong>10 years across UX design and frontend engineering</strong>, I've built
+            interfaces, led design system initiatives, and helped teams move from inconsistency to
+            shared, scalable UI infrastructure.
           </p>
           <p className="text-lg leading-relaxed">
-            My current title is <strong>Senior Software Engineer</strong>, but the role I identify
-            with most is <strong>UX Engineer</strong>, working between design and engineering to
-            build scalable interfaces and design systems. I enjoy building systems that help
-            developers move faster and bridge the gap between{" "}
-            <strong>design and engineering</strong>.
+            Most recently I've operated as a <strong>Tech Lead and Design System Engineer</strong>{" "}
+            at Sportradar, owning a React component library adopted across a large internal
+            developer community. I mentor engineers, define component APIs, and drive developer
+            experience improvements — all while staying close to the code.
           </p>
           <p className="text-lg leading-relaxed">
-            Most of my work has been done inside <strong>large enterprise environments</strong>,
-            where NDAs prevent me from sharing the actual products. What I can share, however, are
-            the ideas, challenges, and lessons behind them — something I'm always happy to talk
-            about in an interview.
-          </p>
-          <p className="text-lg leading-relaxed">
+            Much of my work lives under NDA, but the thinking behind it doesn't.{" "}
             <strong>
-              My current weapons of choice are Figma, VS Code, React, SCSS, and the occasional witty
-              conversation about design systems.
+              I'm always happy to walk through challenges and decisions in an interview.
             </strong>
           </p>
           <Blockquote color="cyan" mt="xl" className="md:hidden block">
