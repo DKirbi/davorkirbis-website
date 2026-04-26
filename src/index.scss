@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-$primary-color: #2b9dbc;
+$primary-color: #52b8d3;
 
 @layer base {
   :root {
@@ -21,10 +21,35 @@ $primary-color: #2b9dbc;
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
 
 body {
+  --mantine-color-body: #efefef;
+  --mantine-color-text: #1f2937;
   background-color: #efefef;
   background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat;
   font-family: "Lato", "Helvetica", sans-serif;
+  color: var(--mantine-color-text);
+}
+
+html[data-mantine-color-scheme="dark"] body {
+  --mantine-color-body: #292929;
+  --mantine-color-text: #e5e7eb;
+  --mantine-color-cyan-6: #52b8d3;
+  --mantine-color-cyan-7: #3ca5c2;
+  background-color: #292929;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f3f4f6' fill-opacity='0.18' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  color: var(--mantine-color-text);
+}
+
+.nav-surface {
+  background-color: #efefef;
+}
+
+html[data-mantine-color-scheme="dark"] .nav-surface {
+  background-color: #343434;
+}
+
+html[data-mantine-color-scheme="dark"] .logo-svg path {
+  fill: #ffffff;
 }
 
 h1,
@@ -75,4 +100,15 @@ p {
       }
     }
   }
+}
+
+.sportradar-link {
+  color: #f08a8a;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.sportradar-link:hover {
+  color: #e46f6f;
+  text-decoration: underline;
 }

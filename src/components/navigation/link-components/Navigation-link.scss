@@ -1,4 +1,4 @@
-$primary-color: #2b9dbc;
+$primary-color: #52b8d3;
 
 .nav-link {
   font-size: 18px;
@@ -13,5 +13,17 @@ $primary-color: #2b9dbc;
     font-weight:  700;
     color: $primary-color;
     
+  }
+}
+
+html[data-mantine-color-scheme="dark"] .nav-link {
+  color: #d1d5db;
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  &.active {
+    color: $primary-color;
   }
 }

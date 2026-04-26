@@ -9,7 +9,7 @@ export interface LogoProps {
 export const Logo: React.FC<LogoProps> = ({ linksTo }) => {
   return (
     <NavLink to={`${linksTo}`} className="logo-link">
-      <LogoImage />
+      <LogoImage className="logo-svg" />
     </NavLink>
   );
 };
