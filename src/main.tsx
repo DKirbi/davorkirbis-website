@@ -1,3 +1,4 @@
+import "./i18n";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.scss";
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <MantineProvider>
+    <MantineProvider defaultColorScheme="auto">
       <RouterProvider router={router} />
     </MantineProvider>
   </StrictMode>,
