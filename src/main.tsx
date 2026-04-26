@@ -10,6 +10,7 @@ import { AboutMe } from "./routes/about-me";
 import { CV } from "./routes/cv";
 import { Photos } from "./routes/photos";
 import "@mantine/core/styles.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,7 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <MantineProvider defaultColorScheme="auto">
       <RouterProvider router={router} />
+      <Analytics />
     </MantineProvider>
   </StrictMode>,
 );
