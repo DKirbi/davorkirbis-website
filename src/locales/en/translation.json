@@ -1,0 +1,152 @@
+{
+  "nav": {
+    "aboutMe": "About me",
+    "resume": "Resume",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "aboutMe": {
+    "heading": {
+      "foreword": "I'm <strong>Davor</strong> — ",
+      "role": "a <strong>UX Engineer</strong>"
+    },
+    "subheading": "Bridging design and engineering through scalable interfaces and design systems.",
+    "hobbies": "Outside of work, I enjoy photography — I shoot with a Sony Alpha 6000 and a growing collection of APS-C lenses. I also like bouldering, gaming, and these days I spend a lot of my free time exploring the world together with my one-year-old daughter.",
+    "ExperienceParagraph": {
+      "p1": "Today I work as a <strong>Product Designer</strong> at <a>@Sportradar</a>, focused on creating consistent, scalable user interfaces across complex internal products.",
+      "p2": "Alongside product design, I document UX and UI patterns and turn them into practical Cursor/Copilot rule-and-skill frameworks, enabling frontend developers and designers to produce low-fidelity and high-fidelity prototypes for new tools and features.",
+      "p3": "Most recently I've also operated as a <strong>Tech Lead and Design Technologist</strong> at Sportradar, owning a React component library adopted across a large internal developer community. I mentor engineers, define component APIs, and drive developer experience improvements — all while staying close to the code."
+    },
+    "downloadResume": "Download Resume",
+    "fileSize": "(1.9 MB .PDF)"
+  },
+  "cv": {
+    "experience": "Experience",
+    "education": "Education"
+  },
+  "cvContent": {
+    "experience": {
+      "sportradar": {
+        "company": "Sportradar d.o.o.",
+        "role": "Senior UX Engineer",
+        "period": { "start": "Feb 2023", "end": "Present" },
+        "highlight": "Product Designer and Tech Lead for Podium — shaping internal tool UX and AI-enabled prototyping workflows while scaling a React UI library adopted by 120+ developers across 50+ production environments.",
+        "description": "I currently work as a Product Designer in a cross-functional squad, designing interfaces for internal tools used by sports operators through UX research, prototyping, and close collaboration with engineers during delivery. I also document UX and UI patterns across our interfaces and translate them into Cursor/Copilot rule-and-skill frameworks, enabling frontend developers and designers to produce both low-fidelity and high-fidelity prototypes for new tools and features.\n\nLed the evolution of Podium, Sportradar's internal React design system, as both contributor and Tech Lead. Owned component architecture, API design, and developer experience — ensuring the library scaled reliably across a large, distributed engineering organisation.\n\nMentored a frontend engineer embedded in the team and built a contribution model that enabled developers from other teams to extend the system confidently. Drove adoption through documentation, office hours, and direct support."
+      },
+      "chiliDigital": {
+        "company": "ChiliDigital",
+        "role": "Web Developer & UX Consultant",
+        "period": { "start": "Aug 2022", "end": "Dec 2022" },
+        "highlight": "Delivered a HubSpot CMS website and reusable content modules, improving editorial efficiency and SEO structure.",
+        "description": "Designed and developed a HubSpot CMS website for Reise Medizin Zurich, building flexible, editor-friendly modules that reduced content management overhead.\n\nProvided UX consulting alongside development, advising on information architecture and improving on-page SEO structure across the site."
+      },
+      "kalmia": {
+        "company": "Kalmia d.o.o.",
+        "role": "Front-end Developer",
+        "period": { "start": "Jan 2022", "end": "Jun 2022" },
+        "highlight": "Built responsive, animated frontends for multiple NFT and Web3 projects using Vue.js and Nuxt.",
+        "description": "Implemented mobile-first responsive interfaces and transition animations across several client projects including Planica NFT, Izumi World, and the Kalmia company site.\n\nCollaborated directly with external designers and clients, translating designs into production-ready Vue 2/3 components using the Composition API and SCSS."
+      },
+      "cosylab": {
+        "company": "Cosylab d.d.",
+        "role": "Product Designer & Front-end Developer",
+        "period": { "start": "Jan 2021", "end": "Jan 2022" },
+        "highlight": "Designed and developed interfaces for an Oncology Information System, validated through usability testing with medical professionals.",
+        "description": "Owned the UX process end-to-end — from low-fidelity wireframes to usability testing with doctors and medical physicists — for a complex clinical application requiring high precision and low error tolerance.\n\nImplemented frontend components in React and Bootstrap, and designed a UI system for a handheld medical device. Delivered Figma-based design systems and Zeplin handoffs that engineering teams used directly in production."
+      },
+      "comtradeGaming": {
+        "company": "Comtrade Gaming",
+        "role": "UX / UI Designer",
+        "period": { "start": "Apr 2020", "end": "Dec 2020" },
+        "highlight": "Designed a Back Office design system and high-fidelity interfaces for iGaming operators.",
+        "description": "Designed high-fidelity mockups and a component-level design system for Back Office platforms used by casino operators.\n\nWorked closely with frontend developers, providing rapid prototypes and interactive browser-based proofs of concept to accelerate delivery cycles."
+      },
+      "hycu": {
+        "company": "HYCU Inc.",
+        "role": "UX / UI Designer",
+        "period": { "start": "Mar 2018", "end": "Apr 2020" },
+        "highlight": "Owned UI design and interaction patterns for an enterprise Backup and Restore application from early-stage startup to product maturity.",
+        "description": "Defined and maintained interaction design standards across the application, ensuring consistency as the product scaled. Created detailed Figma and Zeplin handoffs consumed directly by the frontend team.\n\nMentored outsourced graphic designers on UI principles and icon design, raising the quality of visual contributions across the team."
+      },
+      "comtradeSoftware": {
+        "company": "Comtrade Software",
+        "role": "UX / UI Designer",
+        "period": { "start": "Sep 2016", "end": "Mar 2018" },
+        "highlight": "Designed early-stage prototypes for a Backup and Restore application, bridging UX and frontend proof-of-concept work.",
+        "description": "Produced low and high-fidelity prototypes using Illustrator and early browser-based tooling. Contributed frontend development on two proof-of-concept applications using jQuery, Bootstrap 3, and SCSS.\n\nAuthored a GUI manual that served as the primary design reference for the frontend engineering team."
+      },
+      "bienengesundheit": {
+        "company": "Bienengesundheit.at",
+        "role": "Web Designer & Developer",
+        "period": { "start": "Apr 2015", "end": "Mar 2016" },
+        "highlight": "Designed and developed a web application for bee population monitoring and protection.",
+        "description": "Designed the full UI and contributed to development of an interactive mapping application using WordPress, Leaflet.js, and jQuery.\n\nThis project marked the beginning of my design-to-code practice — learning to own both the visual design and its implementation."
+      },
+      "knapp": {
+        "company": "KNAPP AG",
+        "role": "Intern UI Designer",
+        "period": { "start": "Jul 2014", "end": "Sep 2014" },
+        "highlight": "Designed icons and UI mockups for warehouse logistics software, and authored the GUI specification manual.",
+        "description": "Created icon sets and high-fidelity interface mockups for internal logistics applications. Produced a structured GUI manual used by frontend developers as the authoritative design reference."
+      }
+    },
+    "education": {
+      "fhJoanneum": {
+        "school": "FH Joanneum Graz",
+        "degree": "Master of Arts in Interaction Design",
+        "period": { "start": "Oct 2014", "end": "Aug 2016" },
+        "highlight": "Focused on practical UX design projects combining programming, visualization, and interaction design.",
+        "description": "Worked on many practical projects using Arduino microcontrollers and graphical programming applications such as Max/MSP and Processing.\n\nContributed as a UX/UI Designer to Pocket Code, a coding-for-kids application version for Windows Phone.\n\nCreated a nutritional visualization mobile prototype application and experimented with Node.js and D3.js to build an industrial weight scale capable of displaying nutritional graphs of fruits and vegetables.\n\nLearned user experience design through various real-world projects and used programming and visual programming tools to create small interactive prototypes."
+      },
+      "feriMaribor": {
+        "school": "FERI Maribor",
+        "degree": "Bachelor of Arts in Visual Communication",
+        "period": { "start": "Oct 2008", "end": "Aug 2013" },
+        "highlight": "Studied media sciences with focus on visual communication and graphic design.",
+        "description": "Studied media sciences with a focus on visual communication and design.\n\nWorked as the main graphic designer for a student magazine and as a main graphic designer and photographer for University of Maribor campaigns.\n\nDid student work as a graphic design intern in an advertising agency."
+      }
+    },
+    "pills": {
+      "react": "React",
+      "typescript": "TypeScript",
+      "javascript": "JavaScript",
+      "nodeJs": "Node.js",
+      "vueJs": "Vue.js",
+      "nuxtJs": "Nuxt.js",
+      "compositionApi": "Composition API",
+      "html": "HTML",
+      "css": "CSS",
+      "scss": "SCSS",
+      "bootstrap": "Bootstrap",
+      "accessibility": "Accessibility",
+      "responsiveDesign": "Responsive Design",
+      "seo": "SEO",
+      "designSystems": "Design Systems",
+      "designTokens": "Design Tokens",
+      "figma": "Figma",
+      "storybook": "Storybook",
+      "mantine": "Mantine",
+      "zeplin": "Zeplin",
+      "uxDesign": "UX Design",
+      "uiDesign": "UI Design",
+      "interactionDesign": "Interaction Design",
+      "userResearch": "User Research",
+      "prototyping": "Prototyping",
+      "dataVisualization": "Data Visualization",
+      "d3js": "D3.js",
+      "graphicDesign": "Graphic Design",
+      "iconDesign": "Icon Design",
+      "visualCommunication": "Visual Communication",
+      "printDesign": "Print Design",
+      "photography": "Photography",
+      "illustrator": "Illustrator",
+      "wordpress": "WordPress",
+      "php": "PHP",
+      "hubspotCms": "HubSpot CMS",
+      "jquery": "jQuery",
+      "arduino": "Arduino",
+      "maxMsp": "Max/MSP",
+      "guiManual": "GUI Manual"
+    }
+  }
+}

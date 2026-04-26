@@ -1,0 +1,153 @@
+{
+  "nav": {
+    "aboutMe": "Über mich",
+    "resume": "Lebenslauf",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  },
+  "aboutMe": {
+    "heading": {
+      "foreword": "Ich bin <strong>Davor</strong> — ",
+      "role": "ein <strong>UX Engineer</strong>"
+    },
+    "subheading": "Brücken zwischen Design und Entwicklung durch skalierbare Interfaces und Design Systems.",
+    "experience": "",
+    "ExperienceParagraph": {
+      "p1": "Aktuell arbeite ich als <strong>Product Designer</strong> bei <a>@Sportradar</a> mit Fokus auf konsistente, skalierbare Benutzeroberflächen für komplexe interne Produkte.",
+      "p2": "Zusätzlich zur Produktgestaltung dokumentiere ich UX- und UI-Patterns und überführe sie in praxisnahe Cursor/Copilot-Regel- und Skill-Frameworks, damit Frontend-Entwickler und Designer Low-Fidelity- und High-Fidelity-Prototypen für neue Tools und Features effizient erstellen können.",
+      "p3": "Zuletzt war ich parallel auch als <strong>Tech Lead und Design Technologist</strong> bei Sportradar tätig und verantwortete eine React-Komponentenbibliothek, die von einer großen internen Entwickler-Community genutzt wird. Ich betreue Engineers, definiere Komponenten-APIs und treibe Verbesserungen der Developer Experience voran — stets nah am Code."
+    },
+    "hobbies": "Außerhalb des Berufs verbringe ich mich in Fotografie — ich fotografiere mit einer Sony Alpha 6000 und einer wachsenden Sammlung von APS-C Objektiven. Ich genieße auch Klettern, Videospiele und mein freier Zeit verbringe ich mit meiner kleinen Tochter.",
+    "downloadResume": "Lebenslauf herunterladen",
+    "fileSize": "(1.9 MB .PDF)"
+  },
+  "cv": {
+    "experience": "Berufserfahrung",
+    "education": "Ausbildung"
+  },
+  "cvContent": {
+    "experience": {
+      "sportradar": {
+        "company": "Sportradar d.o.o.",
+        "role": "Senior UX Engineer",
+        "period": { "start": "Feb. 2023", "end": "Heute" },
+        "highlight": "Product Designer und Tech Lead für Podium — ich gestalte UX für interne Tools und AI-gestützte Prototyping-Workflows und skaliere gleichzeitig eine React-UI-Bibliothek, die von 120+ Entwicklern in 50+ Produktivumgebungen genutzt wird.",
+        "description": "Aktuell arbeite ich als Product Designer in einem cross-funktionalen Squad und entwerfe Interfaces für interne Tools von Sportoperatoren — inklusive UX-Research, Prototyping und enger Zusammenarbeit mit Engineers in der Umsetzung. Außerdem dokumentiere ich UX- und UI-Patterns über unsere Interfaces hinweg und übersetze sie in Cursor/Copilot-Regel- und Skill-Frameworks, damit Frontend-Entwickler und Designer sowohl Low-Fidelity- als auch High-Fidelity-Prototypen für neue Tools und Features erstellen können.\n\nIch habe die Weiterentwicklung von Podium, Sportradars internem React-Designsystem, als Contributor und Tech Lead vorangetrieben. Dabei verantwortete ich Komponentenarchitektur, API-Design und Developer Experience, damit die Bibliothek in einer großen, verteilten Engineering-Organisation zuverlässig skaliert.\n\nIch mentorierte einen Frontend Engineer im Team und etablierte ein Contribution-Modell, mit dem Entwickler aus anderen Teams das System sicher erweitern konnten. Die Akzeptanz steigerte ich durch Dokumentation, Office Hours und direkte Unterstützung."
+      },
+      "chiliDigital": {
+        "company": "ChiliDigital",
+        "role": "Web Developer & UX Consultant",
+        "period": { "start": "Aug. 2022", "end": "Dez. 2022" },
+        "highlight": "Lieferte eine HubSpot-CMS-Website und wiederverwendbare Content-Module, wodurch redaktionelle Abläufe und die SEO-Struktur verbessert wurden.",
+        "description": "Ich konzipierte und entwickelte eine Website in HubSpot CMS für Reise Medizin Zurich und baute flexible, redaktionsfreundliche Module, die den Pflegeaufwand für Inhalte reduzierten.\n\nParallel zur Entwicklung beriet ich in UX-Fragen, optimierte die Informationsarchitektur und verbesserte die On-Page-SEO-Struktur über die gesamte Website."
+      },
+      "kalmia": {
+        "company": "Kalmia d.o.o.",
+        "role": "Front-end Developer",
+        "period": { "start": "Jan. 2022", "end": "Jun. 2022" },
+        "highlight": "Entwickelte responsive, animierte Frontends für mehrere NFT- und Web3-Projekte mit Vue.js und Nuxt.",
+        "description": "Ich implementierte mobile-first responsive Interfaces und Transition-Animationen in mehreren Kundenprojekten, darunter Planica NFT, Izumi World und die Kalmia-Unternehmenswebsite.\n\nIch arbeitete direkt mit externen Designern und Kunden zusammen und übersetzte Designs in produktionsreife Vue-2/3-Komponenten mit Composition API und SCSS."
+      },
+      "cosylab": {
+        "company": "Cosylab d.d.",
+        "role": "Product Designer & Front-end Developer",
+        "period": { "start": "Jan. 2021", "end": "Jan. 2022" },
+        "highlight": "Entwarf und entwickelte Interfaces für ein Oncology Information System, validiert durch Usability-Tests mit medizinischen Fachkräften.",
+        "description": "Ich verantwortete den UX-Prozess end-to-end — von Low-Fidelity-Wireframes bis zu Usability-Tests mit Ärzten und Medizinphysikern — für eine komplexe klinische Anwendung mit hohen Präzisionsanforderungen und geringer Fehlertoleranz.\n\nIch implementierte Frontend-Komponenten in React und Bootstrap und entwickelte ein UI-System für ein medizinisches Handgerät. Zusätzlich lieferte ich Figma-basierte Designsysteme und Zeplin-Handoffs, die Engineering-Teams direkt in der Produktion nutzten."
+      },
+      "comtradeGaming": {
+        "company": "Comtrade Gaming",
+        "role": "UX / UI Designer",
+        "period": { "start": "Apr. 2020", "end": "Dez. 2020" },
+        "highlight": "Entwarf ein Back-Office-Designsystem und High-Fidelity-Interfaces für iGaming-Operatoren.",
+        "description": "Ich gestaltete High-Fidelity-Mockups und ein komponentenbasiertes Designsystem für Back-Office-Plattformen, die von Casino-Operatoren eingesetzt werden.\n\nIch arbeitete eng mit Frontend-Developern zusammen und lieferte schnelle Prototypen sowie interaktive browserbasierte Proofs of Concept, um Delivery-Zyklen zu beschleunigen."
+      },
+      "hycu": {
+        "company": "HYCU Inc.",
+        "role": "UX / UI Designer",
+        "period": { "start": "Mar. 2018", "end": "Apr. 2020" },
+        "highlight": "Verantwortete UI-Design und Interaktionsmuster für eine Enterprise-Backup-and-Restore-Anwendung vom frühen Startup-Stadium bis zur Produktreife.",
+        "description": "Ich definierte und pflegte Standards für Interaction Design über die gesamte Anwendung hinweg und stellte so Konsistenz sicher, während das Produkt skalierte. Zudem erstellte ich detaillierte Figma- und Zeplin-Handoffs, die vom Frontend-Team direkt umgesetzt wurden.\n\nIch mentorierte externe Grafikdesigner in UI-Prinzipien und Icon Design und steigerte dadurch die Qualität visueller Beiträge im Team."
+      },
+      "comtradeSoftware": {
+        "company": "Comtrade Software",
+        "role": "UX / UI Designer",
+        "period": { "start": "Sep. 2016", "end": "Mar. 2018" },
+        "highlight": "Entwarf Early-Stage-Prototypen für eine Backup-and-Restore-Anwendung und verband dabei UX mit Frontend-Proof-of-Concept-Arbeit.",
+        "description": "Ich erstellte Low- und High-Fidelity-Prototypen mit Illustrator und frühen browserbasierten Tools. Außerdem leistete ich Frontend-Entwicklung an zwei Proof-of-Concept-Anwendungen mit jQuery, Bootstrap 3 und SCSS.\n\nIch verfasste ein GUI-Handbuch, das dem Frontend-Engineering-Team als zentrale Designreferenz diente."
+      },
+      "bienengesundheit": {
+        "company": "Bienengesundheit.at",
+        "role": "Web Designer & Developer",
+        "period": { "start": "Apr. 2015", "end": "Mar. 2016" },
+        "highlight": "Entwarf und entwickelte eine Webanwendung zur Überwachung und zum Schutz von Bienenpopulationen.",
+        "description": "Ich entwarf das vollständige UI und wirkte an der Entwicklung einer interaktiven Mapping-Anwendung mit WordPress, Leaflet.js und jQuery mit.\n\nDieses Projekt markierte den Beginn meiner Design-to-Code-Praxis — ich lernte, sowohl das visuelle Design als auch dessen Umsetzung zu verantworten."
+      },
+      "knapp": {
+        "company": "KNAPP AG",
+        "role": "Intern UI Designer",
+        "period": { "start": "Jul. 2014", "end": "Sep. 2014" },
+        "highlight": "Entwarf Icons und UI-Mockups für Warehouse-Logistiksoftware und verfasste das GUI-Spezifikationshandbuch.",
+        "description": "Ich erstellte Icon-Sets und High-Fidelity-Interface-Mockups für interne Logistikanwendungen. Zusätzlich produzierte ich ein strukturiertes GUI-Handbuch, das Frontend-Entwicklern als verbindliche Designreferenz diente."
+      }
+    },
+    "education": {
+      "fhJoanneum": {
+        "school": "FH Joanneum Graz",
+        "degree": "Master of Arts in Interaction Design",
+        "period": { "start": "Okt. 2014", "end": "Aug. 2016" },
+        "highlight": "Fokussierte sich auf praxisnahe UX-Design-Projekte, die Programmierung, Visualisierung und Interaktionsdesign kombinierten.",
+        "description": "Ich arbeitete an zahlreichen Praxisprojekten mit Arduino-Mikrocontrollern und grafischen Programmierumgebungen wie Max/MSP und Processing.\n\nAls UX/UI Designer trug ich zu Pocket Code bei, einer Coding-for-Kids-Anwendung für Windows Phone.\n\nIch entwickelte einen mobilen Prototyp zur Nährwertvisualisierung und experimentierte mit Node.js und D3.js, um eine industrielle Waage zu bauen, die Nährwertdiagramme von Obst und Gemüse anzeigen konnte.\n\nDurch verschiedene reale Projekte vertiefte ich mein Wissen im User Experience Design und nutzte Programmierung sowie visuelle Programmierwerkzeuge, um kleine interaktive Prototypen zu entwickeln."
+      },
+      "feriMaribor": {
+        "school": "FERI Maribor",
+        "degree": "Bachelor of Arts in Visual Communication",
+        "period": { "start": "Okt. 2008", "end": "Aug. 2013" },
+        "highlight": "Studierte Medienwissenschaften mit Schwerpunkt auf visueller Kommunikation und Grafikdesign.",
+        "description": "Ich studierte Medienwissenschaften mit Schwerpunkt auf visueller Kommunikation und Design.\n\nIch arbeitete als leitender Grafikdesigner für ein Studentenmagazin sowie als leitender Grafikdesigner und Fotograf für Kampagnen der Universität Maribor.\n\nZusätzlich absolvierte ich studentische Praxis als Grafikdesign-Praktikant in einer Werbeagentur."
+      }
+    },
+    "pills": {
+      "react": "React",
+      "typescript": "TypeScript",
+      "javascript": "JavaScript",
+      "nodeJs": "Node.js",
+      "vueJs": "Vue.js",
+      "nuxtJs": "Nuxt.js",
+      "compositionApi": "Composition API",
+      "html": "HTML",
+      "css": "CSS",
+      "scss": "SCSS",
+      "bootstrap": "Bootstrap",
+      "accessibility": "Accessibility",
+      "responsiveDesign": "Responsives Design",
+      "seo": "SEO",
+      "designSystems": "Designsysteme",
+      "designTokens": "Design Tokens",
+      "figma": "Figma",
+      "storybook": "Storybook",
+      "mantine": "Mantine",
+      "zeplin": "Zeplin",
+      "uxDesign": "UX Design",
+      "uiDesign": "UI Design",
+      "interactionDesign": "Interaktionsdesign",
+      "userResearch": "Nutzerforschung",
+      "prototyping": "Prototyping",
+      "dataVisualization": "Datenvisualisierung",
+      "d3js": "D3.js",
+      "graphicDesign": "Grafikdesign",
+      "iconDesign": "Icon Design",
+      "visualCommunication": "Visuelle Kommunikation",
+      "printDesign": "Printdesign",
+      "photography": "Fotografie",
+      "illustrator": "Illustrator",
+      "wordpress": "WordPress",
+      "php": "PHP",
+      "hubspotCms": "HubSpot CMS",
+      "jquery": "jQuery",
+      "arduino": "Arduino",
+      "maxMsp": "Max/MSP",
+      "guiManual": "GUI Handbuch"
+    }
+  }
+}

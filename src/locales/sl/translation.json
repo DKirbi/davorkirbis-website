@@ -1,0 +1,152 @@
+{
+  "nav": {
+    "aboutMe": "O meni",
+    "resume": "Življenjepis",
+    "openMenu": "Odpri meni",
+    "closeMenu": "Zapri meni"
+  },
+  "aboutMe": {
+    "heading": {
+      "foreword": "Sem <strong>Davor</strong>, — ",
+      "role": "inženir <strong>uporabniške izkušnje</strong>"
+    },
+    "subheading": "Povezujem design in inženiring uporabniških vmesnikov in design sistemov za boljšo uporabniško izkušnjo.",
+    "ExperienceParagraph": {
+      "p1": "Trenutno delujem kot <strong>Product Designer</strong> pri <a>@Sportradar</a>, osredotočen na ustvarjanje konsistentnih in skalabilnih uporabniških vmesnikov za kompleksne interne produkte.",
+      "p2": "Poleg produktnega dizajna dokumentiram UX in UI vzorce ter jih pretvarjam v praktične Cursor/Copilot okvire pravil in skillov, da lahko frontend razvijalci in oblikovalci hitreje ustvarjajo low-fidelity in high-fidelity prototipe novih orodij in funkcionalnosti.",
+      "p3": "Vzporedno sem v zadnjem obdobju deloval tudi kot <strong>Tech Lead in Design Technologist</strong> pri Sportradarju, kjer sem vodil React knjižnico komponent, ki jo uporablja velika skupnost internih razvijalcev. Mentoriram inženirje, definiram API-je komponent in izboljšujem developer experience — vse to ob tesnem stiku s kodo."
+    },
+    "downloadResume": "Prenesi življenjepis",
+    "fileSize": "(1.9 MB .PDF)",
+    "hobbies": "Zunaj dela uživam v fotografiji — fotografiram s Sony Alpha 6000 in z rastočo zbirko APS-C objektivov. Uživam tudi v plezanju, video igrami, preostali čas pa preživljam z mojo družino."
+  },
+  "cv": {
+    "experience": "Izkušnja",
+    "education": "Izobrazba"
+  },
+  "cvContent": {
+    "experience": {
+      "sportradar": {
+        "company": "Sportradar d.o.o.",
+        "role": "Senior UX Engineer",
+        "period": { "start": "feb. 2023", "end": "Danes" },
+        "highlight": "Product Designer v cross-functional ekipi in Tech Lead za Podium — oblikujem UX interna orodja in AI-podprte prototipne delovne tokove, hkrati pa skaliram React UI knjižnico, ki jo uporablja 120+ razvijalcev v 50+ produkcijskih okoljih.",
+        "description": "Trenutno delujem kot Product Designer v cross-functional ekipi, kjer načrtujem vmesnike za interna orodja športnih operaterjev — od UX raziskav in prototipiranja do tesnega sodelovanja z inženirji pri izvedbi. Hkrati dokumentiram UX in UI vzorce naših vmesnikov ter jih prevajam v Cursor/Copilot okvire pravil in skillov, da lahko frontend razvijalci in oblikovalci ustvarjajo tako low-fidelity kot high-fidelity prototipe novih orodij in funkcionalnosti.\n\nVodil sem razvoj Podiuma, Sportradarjevega internega React design sistema, kot Design Technologist in vodja razvoja. Odgovoren sem bil za arhitekturo komponent, API dizajn in razvijalsko izkušnjo, da knjižnica zanesljivo skalira v veliki, porazdeljeni inženirski organizaciji.\n\nMentoriral sem frontend inženirja v ekipi in vzpostavil model prispevkov, ki razvijalcem iz drugih ekip omogoča samozavestno širitev sistema. Sprejetje sem spodbujal z ustvarjanjem berljive dokumentacije, širjenjem skupnosti in neposredno podporo."
+      },
+      "chiliDigital": {
+        "company": "ChiliDigital",
+        "role": "Web Developer & UX Consultant",
+        "period": { "start": "avg. 2022", "end": "dec. 2022" },
+        "highlight": "Vzpostavil sem spletno stran v HubSpot CMS in ponovno uporabne vsebinske module, s čimer sem izboljšal uredniško učinkovitost in SEO strukturo.",
+        "description": "Načrtoval in razvil sem spletno stran v HubSpot CMS za Reise Medizin Zurich ter zgradil prilagodljive module, prijazne urednikom, ki so zmanjšali stroške upravljanja vsebin.\n\nOb razvoju sem svetoval tudi na področju UX, izboljšal informacijsko arhitekturo in optimiziral on-page SEO strukturo na celotnem spletišču."
+      },
+      "kalmia": {
+        "company": "Kalmia d.o.o.",
+        "role": "Front-end Developer",
+        "period": { "start": "jan. 2022", "end": "jun. 2022" },
+        "highlight": "Razvil sem odzivne, animirane fronte za več NFT in Web3 projektov z uporabo Vue.js in Nuxt.",
+        "description": "Implementiral sem mobile-first odzivne vmesnike in prehodne animacije na več projektih za naročnike, med drugim Planica NFT, Izumi World in spletno stran podjetja Kalmia.\n\nNeposredno sem sodeloval z zunanjimi oblikovalci in naročniki ter dizajne pretvarjal v produkcijsko pripravljene Vue 2/3 komponente z uporabo Composition API in SCSS."
+      },
+      "cosylab": {
+        "company": "Cosylab d.d.",
+        "role": "Product Designer & Front-end Developer",
+        "period": { "start": "jan. 2021", "end": "jan. 2022" },
+        "highlight": "Zasnoval in razvil sem vmesnike za Onkološki informacijski sistem, potrjene z uporabniškimi testiranji z medicinskimi strokovnjaki.",
+        "description": "Odgovoren sem bil za UX proces od začetka do konca — od low-fidelity wireframov do testiranja uporabnosti z zdravniki in medicinskimi fiziki — za kompleksno klinično aplikacijo, ki zahteva visoko natančnost in nizko toleranco napak.\n\nImplementiral sem frontend komponente v Reactu in Bootstrapu ter zasnoval UI sistem za ročno medicinsko napravo. Pripravil sem tudi design sisteme v Figmi in Zeplin handoffe, ki so jih inženirske ekipe neposredno uporabile v produkciji."
+      },
+      "comtradeGaming": {
+        "company": "Comtrade Gaming",
+        "role": "UX / UI Designer",
+        "period": { "start": "apr. 2020", "end": "dec. 2020" },
+        "highlight": "Zasnoval sem Back Office design sistem in high-fidelity vmesnike za iGaming operaterje.",
+        "description": "Oblikoval sem high-fidelity mockupe in komponentni design sistem za Back Office platforme, ki jih uporabljajo casino operaterji.\n\nTesno sem sodeloval s frontend razvijalci ter pripravljal hitre prototipe in interaktivne browser-based proof-of-concepte za pospešitev dostavnih ciklov."
+      },
+      "hycu": {
+        "company": "HYCU Inc.",
+        "role": "UX / UI Designer",
+        "period": { "start": "mar. 2018", "end": "apr. 2020" },
+        "highlight": "Prevzel sem odgovornost za UI dizajn in interakcijske vzorce pri enterprise Backup and Restore aplikaciji od zgodnje startup faze do zrelega produkta.",
+        "description": "Definiral in vzdrževal sem standarde interakcijskega dizajna skozi celotno aplikacijo ter zagotavljal konsistentnost ob rasti produkta. Pripravil sem podrobne Figma in Zeplin handoffe, ki jih je frontend ekipa uporabljala neposredno.\n\nMentoriral sem zunanje grafične oblikovalce pri UI principih in icon designu ter s tem dvignil kakovost vizualnih prispevkov v ekipi."
+      },
+      "comtradeSoftware": {
+        "company": "Comtrade Software",
+        "role": "UX / UI Designer",
+        "period": { "start": "sep. 2016", "end": "mar. 2018" },
+        "highlight": "Zasnoval sem zgodnje prototipe za Backup and Restore aplikacijo ter povezal UX z frontend proof-of-concept razvojem.",
+        "description": "Pripravil sem low- in high-fidelity prototipe z Illustratorjem in zgodnjimi browser-based orodji. Prispeval sem tudi frontend razvoj na dveh proof-of-concept aplikacijah z uporabo jQuery, Bootstrap 3 in SCSS.\n\nNapisal sem GUI priročnik, ki je frontend inženirski ekipi služil kot glavna referenca za dizajn."
+      },
+      "bienengesundheit": {
+        "company": "Bienengesundheit.at",
+        "role": "Web Designer & Developer",
+        "period": { "start": "apr. 2015", "end": "mar. 2016" },
+        "highlight": "Zasnoval in razvil sem spletno aplikacijo za spremljanje in zaščito čebeljih populacij.",
+        "description": "Zasnoval sem celoten UI in sodeloval pri razvoju interaktivne zemljevidne aplikacije z WordPressom, Leaflet.js in jQueryjem.\n\nTa projekt je označil začetek moje design-to-code prakse — naučil sem se prevzemati odgovornost tako za vizualni dizajn kot tudi za njegovo implementacijo."
+      },
+      "knapp": {
+        "company": "KNAPP AG",
+        "role": "Intern UI Designer",
+        "period": { "start": "jul. 2014", "end": "sep. 2014" },
+        "highlight": "Zasnoval sem ikone in UI mockupe za programsko opremo skladiščne logistike ter pripravil GUI specifikacijski priročnik.",
+        "description": "Pripravil sem sete ikon in high-fidelity mockupe vmesnikov za interne logistične aplikacije. Ustvaril sem tudi strukturiran GUI priročnik, ki je frontend razvijalcem služil kot avtoritativna referenca za dizajn."
+      }
+    },
+    "education": {
+      "fhJoanneum": {
+        "school": "FH Joanneum Graz",
+        "degree": "Master of Arts in Interaction Design",
+        "period": { "start": "okt. 2014", "end": "avg. 2016" },
+        "highlight": "Osredotočil sem se na praktične UX projekte, ki združujejo programiranje, vizualizacijo in interakcijski dizajn.",
+        "description": "Sodeloval sem pri številnih praktičnih projektih z Arduino mikrokontrolerji in grafičnimi programskimi orodji, kot sta Max/MSP in Processing.\n\nKot UX/UI Designer sem prispeval k Pocket Code, različici coding-for-kids aplikacije za Windows Phone.\n\nUstvaril sem mobilni prototip za vizualizacijo prehranskih podatkov in eksperimentiral z Node.js ter D3.js pri izdelavi industrijske tehtnice, ki je prikazovala prehranske grafe sadja in zelenjave.\n\nZnanje uporabniške izkušnje sem poglabljal skozi različne realne projekte ter z uporabo programiranja in vizualnih programskih orodij ustvarjal manjše interaktivne prototipe."
+      },
+      "feriMaribor": {
+        "school": "FERI Maribor",
+        "degree": "Bachelor of Arts in Visual Communication",
+        "period": { "start": "okt. 2008", "end": "avg. 2013" },
+        "highlight": "Študiral sem medijske vede s poudarkom na vizualni komunikaciji in grafičnem oblikovanju.",
+        "description": "Študiral sem medijske vede s poudarkom na vizualni komunikaciji in oblikovanju.\n\nDelal sem kot glavni grafični oblikovalec za študentsko revijo ter kot glavni grafični oblikovalec in fotograf za kampanje Univerze v Mariboru.\n\nOpravljal sem tudi študentsko prakso kot pripravnik za grafično oblikovanje v oglaševalski agenciji."
+      }
+    },
+    "pills": {
+      "react": "React",
+      "typescript": "TypeScript",
+      "javascript": "JavaScript",
+      "nodeJs": "Node.js",
+      "vueJs": "Vue.js",
+      "nuxtJs": "Nuxt.js",
+      "compositionApi": "Composition API",
+      "html": "HTML",
+      "css": "CSS",
+      "scss": "SCSS",
+      "bootstrap": "Bootstrap",
+      "accessibility": "Accessibility",
+      "responsiveDesign": "Responsive Design",
+      "seo": "SEO",
+      "designSystems": "Design Systems",
+      "designTokens": "Design Tokens",
+      "figma": "Figma",
+      "storybook": "Storybook",
+      "mantine": "Mantine",
+      "zeplin": "Zeplin",
+      "uxDesign": "UX Design",
+      "uiDesign": "UI Design",
+      "interactionDesign": "Interaction Design",
+      "userResearch": "User Research",
+      "prototyping": "Prototyping",
+      "dataVisualization": "Data Visualization",
+      "d3js": "D3.js",
+      "graphicDesign": "Graphic Design",
+      "iconDesign": "Icon Design",
+      "visualCommunication": "Visual Communication",
+      "printDesign": "Print Design",
+      "photography": "Photography",
+      "illustrator": "Illustrator",
+      "wordpress": "WordPress",
+      "php": "PHP",
+      "hubspotCms": "HubSpot CMS",
+      "jquery": "jQuery",
+      "arduino": "Arduino",
+      "maxMsp": "Max/MSP",
+      "guiManual": "GUI Manual"
+    }
+  }
+}

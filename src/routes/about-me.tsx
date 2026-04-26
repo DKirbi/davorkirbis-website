@@ -7,11 +7,13 @@ import {
   IconDownload,
 } from "@tabler/icons-react";
 import Avatar from "../assets/Me3.jpeg";
+import { Trans, useTranslation } from "react-i18next";
 
 export const AboutMe = () => {
+  const { t } = useTranslation();
   return (
     <div className="w-11/12 mx-auto pt-16">
-      <div className="hero-page flex flex-col md:flex-row justify-center gap-8 ">
+      <div className="hero-page flex flex-col px-16 md:px-0 md:flex-row justify-center gap-8 ">
         <div className="flex flex-col gap-10 align-center">
           <img
             src={`${Avatar}`}
@@ -66,42 +68,44 @@ export const AboutMe = () => {
               href="/CV_DavorK.pdf"
               download="CV_DavorK.pdf"
             >
-              Download Resume <span className="text-sm"> (1.9 MB .PDF)</span>
+              {t("aboutMe.downloadResume")}{" "}
+              <span className="text-sm"> {t("aboutMe.fileSize")}</span>
             </Button>
           </div>
         </div>
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
             <h1 className="text-3xl md:text-5xl md:leading-normal leading-relaxed">
-              I'm <strong>Davor</strong> — <br className="hidden md:block" /> a{" "}
-              <strong>UX Engineer</strong>
+              <Trans i18nKey="aboutMe.heading.foreword" components={{ strong: <strong /> }} />{" "}
+              <br className="hidden md:block" />{" "}
+              <Trans i18nKey="aboutMe.heading.role" components={{ strong: <strong /> }} />
             </h1>
-            <h3 className="italic text-base md:text-lg">
-              Bridging design and engineering through scalable interfaces and design systems.
-            </h3>
           </div>
 
           <p className="text-lg leading-relaxed">
-            Over <strong>10 years across UX design and frontend engineering</strong>, I've built
-            interfaces, led design system initiatives, and helped teams move from inconsistency to
-            shared, scalable UI infrastructure.
+            <Trans
+              i18nKey="aboutMe.ExperienceParagraph.p1"
+              components={{
+                strong: <strong />,
+                a: (
+                  <a
+                    className="sportradar-link"
+                    href="https://sportradar.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  />
+                ),
+              }}
+            />
           </p>
           <p className="text-lg leading-relaxed">
-            Most recently I've operated as a <strong>Tech Lead and Design System Engineer</strong>{" "}
-            at Sportradar, owning a React component library adopted across a large internal
-            developer community. I mentor engineers, define component APIs, and drive developer
-            experience improvements — all while staying close to the code.
+            <Trans i18nKey="aboutMe.ExperienceParagraph.p2" components={{ strong: <strong /> }} />
           </p>
           <p className="text-lg leading-relaxed">
-            Much of my work lives under NDA, but the thinking behind it doesn't.{" "}
-            <strong>
-              I'm always happy to walk through challenges and decisions in an interview.
-            </strong>
+            <Trans i18nKey="aboutMe.ExperienceParagraph.p3" components={{ strong: <strong /> }} />
           </p>
           <Blockquote color="cyan" mt="xl">
-            Outside of work, I enjoy photography — I shoot with a Sony Alpha 6000 and a growing
-            collection of APS-C lenses. I also like bouldering, gaming, and these days I spend a lot
-            of my free time exploring the world together with my one-year-old daughter.
+            {t("aboutMe.hobbies")}
           </Blockquote>
         </div>
       </div>
