@@ -4,6 +4,8 @@ import { createRoot } from "react-dom/client";
 import "./index.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MantineProvider } from "@mantine/core";
+// Entry composes sibling routes; relative imports kept for brevity.
+// All cross-folder imports elsewhere use the `@/` alias.
 import Root from "./routes/root";
 import { AboutMe } from "./routes/about-me";
 
