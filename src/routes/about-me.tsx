@@ -1,113 +1,23 @@
-import { Blockquote, Button, Card, ThemeIcon } from "@mantine/core";
-import {
-  IconBrandFlickr,
-  IconBrandGithubFilled,
-  IconBrandLinkedin,
-  IconMailFilled,
-  IconDownload,
-} from "@tabler/icons-react";
-import Avatar from "../assets/Me3.jpeg";
-import { Trans, useTranslation } from "react-i18next";
+import type { FC } from "react";
+import { AboutMeHero } from "@/components/about-me/AboutMeHero";
+import { AboutMeHeading } from "@/components/about-me/AboutMeHeading";
+import { AboutMeBio } from "@/components/about-me/AboutMeBio";
 
-export const AboutMe = () => {
-  const { t } = useTranslation();
-  return (
-    <div className="grid grid-cols-1 w-11/12 mx-auto md:grid-cols-2 gap-10 md:gap-40 pt-16">
-      <div className="hero-page flex flex-col justify-start">
-        <div className="flex flex-col gap-10 align-center">
-          <img
-            src={`${Avatar}`}
-            alt="Me"
-            className="md:h-[300px] md:w-[auto] h-[200px] w-[auto] self-center rounded-xl object-cover saturate-[0.1] hover:saturate-100 transition-all duration-300"
-          />
-          <div className="buttons-wrapper flex flex-col gap-4">
-            <div className="icons-container flex flex-row gap-4 justify-center">
-              <a
-                href="https://www.linkedin.com/in/davorkirbis/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <ThemeIcon size="lg" variant="filled">
-                  <IconBrandLinkedin style={{ width: "70%", height: "70%" }} stroke={1.5} />
-                </ThemeIcon>
-              </a>
-              <a
-                href="https://www.flickr.com/photos/davorkirbis/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Flickr"
-              >
-                <ThemeIcon size="lg" variant="filled">
-                  <IconBrandFlickr style={{ width: "70%", height: "70%" }} stroke={1.5} />
-                </ThemeIcon>
-              </a>
-              <a
-                href="https://github.com/DKirbi"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-              >
-                <ThemeIcon size="lg" variant="filled">
-                  <IconBrandGithubFilled style={{ width: "70%", height: "70%" }} stroke={1.5} />
-                </ThemeIcon>
-              </a>
-              <a href="mailto:davor.kirbis@gmail.com" aria-label="Email">
-                <ThemeIcon size="lg" variant="filled">
-                  <IconMailFilled style={{ width: "70%", height: "70%" }} stroke={1.5} />
-                </ThemeIcon>
-              </a>
-            </div>
-            <Button
-              className="self-center"
-              fullWidth={false}
-              variant="outline"
-              rightSection={<IconDownload size={14} />}
-              component="a"
-              href="/CV_DavorK.pdf"
-              download="CV_DavorK.pdf"
-            >
-              {t("aboutMe.downloadResume")}{" "}
-              <span className="text-sm"> {t("aboutMe.fileSize")}</span>
-            </Button>
-          </div>
-        </div>
-      </div>
-      <div className="flex flex-col gap-8">
-        <div className="flex flex-col gap-2">
-          <h1 className="text-3xl md:text-5xl md:leading-normal leading-relaxed">
-            <Trans i18nKey="aboutMe.heading.foreword" components={{ strong: <strong /> }} />{" "}
-            <br className="hidden md:block" />{" "}
-            <Trans i18nKey="aboutMe.heading.role" components={{ strong: <strong /> }} />
-          </h1>
-        </div>
+/**
+ * About Me route — two-column layout composing the hero and the bio sections.
+ *
+ * No props — pure composition; all section components own their own i18n.
+ * `Record<string, never>` instead of `interface Foo {}` because
+ * `@typescript-eslint/no-empty-object-type` flags the latter.
+ */
+export type AboutMeProps = Record<string, never>;
 
-        <Card shadow="sm" padding="lg" radius="md">
-          <p className="text-lg leading-relaxed">
-            <Trans
-              i18nKey="aboutMe.ExperienceParagraph.p1"
-              components={{
-                strong: <strong />,
-                a: (
-                  <a
-                    className="sportradar-link"
-                    href="https://sportradar.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  />
-                ),
-              }}
-            />
-          </p>
-          <p className="text-lg leading-relaxed">
-            <Trans i18nKey="aboutMe.ExperienceParagraph.p2" components={{ strong: <strong /> }} />
-          </p>
-          <p className="text-lg leading-relaxed">
-            <Trans i18nKey="aboutMe.ExperienceParagraph.p3" components={{ strong: <strong /> }} />
-          </p>
-          <Blockquote mt="xl">{t("aboutMe.hobbies")}</Blockquote>
-        </Card>
-      </div>
+export const AboutMe: FC<AboutMeProps> = () => (
+  <div className="grid grid-cols-1 w-11/12 mx-auto md:grid-cols-2 gap-10 md:gap-40 pt-16">
+    <AboutMeHero />
+    <div className="flex flex-col gap-8">
+      <AboutMeHeading />
+      <AboutMeBio />
     </div>
-  );
-};
+  </div>
+);
