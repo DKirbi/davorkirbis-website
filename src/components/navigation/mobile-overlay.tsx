@@ -48,6 +48,7 @@ export const MobileOverlay: FC<MobileOverlayProps> = ({
       currentLanguage={currentLanguage}
       onLanguageChange={onLanguageChange}
       isDark={isDark}
+      layout="mobile"
     />
   </div>
 );

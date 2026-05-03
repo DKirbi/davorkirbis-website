@@ -15,7 +15,7 @@ export interface MobileLanguageRowProps {
 }
 
 export const MobileLanguageRow: FC<MobileLanguageRowProps> = ({ currentLanguage, onChange }) => (
-  <div className="flex mobile:hidden gap-2 items-center">
+  <div className="flex mobile:hidden gap-4 items-center">
     {supportedLanguages.map((lang) => {
       const language = languageMetadata[lang];
       const isActive = currentLanguage === lang;
@@ -23,15 +23,17 @@ export const MobileLanguageRow: FC<MobileLanguageRowProps> = ({ currentLanguage,
         <button
           key={lang}
           onClick={() => onChange(lang)}
-          className={`rounded-sm transition-opacity ${
-            isActive ? "opacity-100 ring-1 ring-neutral-500" : "opacity-60 hover:opacity-90"
+          className={`flex items-center justify-center h-[55px] w-[55px] rounded-md transition-opacity ${
+            isActive ? "opacity-100 ring-2 ring-neutral-500" : "opacity-60 hover:opacity-90"
           }`}
           aria-label={`Switch language to ${language.label}`}
         >
+          {/* Swap the flagcdn width param so the larger button doesn't blur the
+              20px asset. `w40` is sharp at 36x24 css pixels. */}
           <img
-            src={language.flagSrc}
+            src={language.flagSrc.replace("w20", "w40")}
             alt={`${language.label} flag`}
-            className="h-3 w-5 rounded-[2px] object-cover"
+            className="h-6 w-9 rounded-sm object-cover"
             loading="lazy"
           />
         </button>

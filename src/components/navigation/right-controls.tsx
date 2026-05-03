@@ -12,20 +12,40 @@ export interface RightControlsProps {
   onLanguageChange: (language: SupportedLanguages) => void;
   /** Whether the app is in dark color scheme; forwarded only to `DesktopLanguageMenu` (the row + toggle don't need it). */
   isDark: boolean;
+  /**
+   * `"topbar"` (default): inline horizontal cluster used on desktop.
+   * `"mobile"`: stacks the flag row above the theme toggle (each on its own
+   * row) with extra vertical breathing room, and renders the toggle at
+   * `size="xl"`.
+   */
+  layout?: "topbar" | "mobile";
 }
 
 export const RightControls: FC<RightControlsProps> = ({
   currentLanguage,
   onLanguageChange,
   isDark,
-}) => (
-  <div className="flex gap-3 items-center">
-    <DesktopLanguageMenu
-      currentLanguage={currentLanguage}
-      onChange={onLanguageChange}
-      isDark={isDark}
-    />
-    <MobileLanguageRow currentLanguage={currentLanguage} onChange={onLanguageChange} />
-    <ThemeToggle />
-  </div>
-);
+  layout = "topbar",
+}) => {
+  if (layout === "mobile") {
+    return (
+      <div className="flex flex-col items-center gap-6">
+        <MobileLanguageRow currentLanguage={currentLanguage} onChange={onLanguageChange} />
+        <div className="mt-2">
+          <ThemeToggle size="xl" />
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex gap-3 items-center">
+      <DesktopLanguageMenu
+        currentLanguage={currentLanguage}
+        onChange={onLanguageChange}
+        isDark={isDark}
+      />
+      <ThemeToggle />
+    </div>
+  );
+};
