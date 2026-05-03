@@ -1,51 +1,61 @@
+import type { FC } from "react";
 import { useEffect, useState } from "react";
+import { PhotoGrid } from "@/components/photos/PhotoGrid";
+import type { Character } from "@/components/photos/PhotoCard";
 
-type Characters = {
-  id: number;
-  name: string;
-  image: string;
-};
+/**
+ * Data-fetching shell for the avatar characters list.
+ *
+ * No props yet — the component is consumed in exactly one place (`/photos`).
+ * Promote the endpoint and an `onError` callback to props the moment a
+ * second caller appears. `Record<string, never>` instead of `interface
+ * Foo {}` because `@typescript-eslint/no-empty-object-type` flags the latter.
+ */
+export type GetPhotosProps = Record<string, never>;
 
-export const GetPhotos = () => {
-  const [data, setData] = useState<Characters[]>([]);
+const CHARACTERS_ENDPOINT = "https://api.sampleapis.com/avatar/characters";
 
+export const GetPhotos: FC<GetPhotosProps> = () => {
+  const [data, setData] = useState<Character[]>([]);
+  const [error, setError] = useState<string | null>(null);
+
+  // Fetch the character list once on mount. Success and error are kept in
+  // separate slots so a string can never end up in the typed `Character[]`.
+  // No explicit `loading` state — the empty-array branch + the error branch
+  // are sufficient for the current UX (a brief blank flash before the grid).
+  // The `cancelled` flag prevents `setData`/`setError` after unmount, which
+  // matters under StrictMode's double-invoke in development.
   useEffect(() => {
+    let cancelled = false;
+
+    const fetchData = async () => {
+      try {
+        const response = await fetch(CHARACTERS_ENDPOINT);
+        if (!response.ok) {
+          throw new Error(`Request failed with status ${response.status}`);
+        }
+        const json: Character[] = await response.json();
+        if (!cancelled) setData(json);
+      } catch (err: unknown) {
+        if (cancelled) return;
+        const message = err instanceof Error ? err.message : String(err);
+        setError(message);
+      }
+    };
+
     fetchData();
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
-  const fetchData = async () => {
-    try {
-      const response = await fetch(
-        "https://api.sampleapis.com/avatar/characters",
-      );
-      const json = await response.json();
-      console.log(json);
-      setData(json);
-    } catch (err: unknown) {
-      //@ts-expect-error err is always unknown
-      setData(err.message);
-    }
-  };
+  if (error) {
+    return <p className="p-4 text-sm text-red-500">Failed to load photos: {error}</p>;
+  }
 
-  const trimUrl = (url: string) => url.replace(/(\.png).*$/, "$1");
+  if (data.length === 0) {
+    return null;
+  }
 
-  return (
-    <div className="flex flex-wrap relative">
-      {data.map((movie) => (
-        <div
-          key={movie.id}
-          className="relative border-solid border border-cyan-500"
-        >
-          <img
-            src={trimUrl(movie.image)}
-            alt={movie.name}
-            className="w-[500px] h-[auto] "
-          />
-          <div className="absolute top-0 opacity-0 hover:opacity-100 hover:cursor-pointer w-full h-full">
-            {movie.name}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
+  return <PhotoGrid items={data} />;
 };
