@@ -13,9 +13,9 @@ import { AboutMeBio } from "@/components/about-me/AboutMeBio";
 export type AboutMeProps = Record<string, never>;
 
 export const AboutMe: FC<AboutMeProps> = () => (
-  <div className="grid grid-cols-1 w-11/12 mx-auto md:grid-cols-2 gap-10 md:gap-40 pt-16">
+  <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-8 md:gap-12 w-11/12 max-w-5xl mx-auto pt-16">
     <AboutMeHero />
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-6">
       <AboutMeHeading />
       <AboutMeBio />
     </div>

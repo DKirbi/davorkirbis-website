@@ -24,7 +24,7 @@ export const PhotoCard: FC<PhotoCardProps> = ({ character }) => (
     <img
       src={trimUrl(character.image)}
       alt={character.name}
-      className="w-[500px] h-[auto] "
+      className="w-full sm:w-72 md:w-80 lg:w-96 h-auto"
     />
     <div className="absolute top-0 opacity-0 hover:opacity-100 hover:cursor-pointer w-full h-full">
       {character.name}

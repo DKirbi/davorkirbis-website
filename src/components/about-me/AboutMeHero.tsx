@@ -13,19 +13,16 @@ import { DownloadResumeButton } from "@/components/about-me/DownloadResumeButton
 export type AboutMeHeroProps = Record<string, never>;
 
 export const AboutMeHero: FC<AboutMeHeroProps> = () => (
-  <div className="hero-page flex flex-col justify-start">
-    <div className="flex flex-col gap-10 align-center">
-      <img
-        src={`${Avatar}`}
-        alt="Me"
-        className="md:h-[300px] md:w-[auto] h-[200px] w-[auto] self-center rounded-xl object-cover saturate-[0.1] hover:saturate-100 transition-all duration-300"
-      />
-
-      {/* Action cluster: social links + CV download */}
-      <div className="buttons-wrapper flex flex-col gap-4">
-        <SocialIcons />
-        <DownloadResumeButton />
-      </div>
+  <div className="flex flex-col items-center gap-6">
+    <img
+      src={`${Avatar}`}
+      alt="Me"
+      className="h-48 md:h-[300px] w-auto rounded-xl object-cover saturate-[0.1] hover:saturate-100 transition duration-300"
+    />
+    {/* Action cluster: social links + CV download */}
+    <div className="flex flex-col gap-4 items-center">
+      <SocialIcons />
+      <DownloadResumeButton />
     </div>
   </div>
 );

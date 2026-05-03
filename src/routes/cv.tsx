@@ -18,7 +18,7 @@ export const CV: FC<CvProps> = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="grid grid-cols-1 w-11/12 mx-auto md:grid-cols-2 gap-40 pt-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 w-11/12 max-w-5xl mx-auto pt-16">
       <CvSection title={t("cv.experience")} dividerColor="cyan">
         <ExperienceTimeline />
       </CvSection>
