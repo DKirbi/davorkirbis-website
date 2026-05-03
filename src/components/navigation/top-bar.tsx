@@ -38,7 +38,7 @@ export const TopBar: FC<TopBarProps> = ({
   <div className="nav-surface fixed left-0 w-full top-0 z-[999]">
     <div className="flex justify-center h-[54px] m-auto">
       <div className="flex justify-between items-center w-9/12 py-3">
-        <Logo linksTo="/" />
+        <Logo linksTo="home" />
 
         {/* Desktop links + right controls (hidden below mobile breakpoint) */}
         <NavLinkGroup>

@@ -2,11 +2,11 @@ import "./i18n";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.scss";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import { MantineProvider } from "@mantine/core";
 // Entry composes sibling routes; relative imports kept for brevity.
 // All cross-folder imports elsewhere use the `@/` alias.
-import Root from "./routes/root";
+import LangRoot from "./routes/root";
 import { AboutMe } from "./routes/about-me";
 
 import { CV } from "./routes/cv";
@@ -14,26 +14,24 @@ import { Photos } from "./routes/photos";
 import "@mantine/core/styles.css";
 import { Analytics } from "@vercel/analytics/react";
 
+// Routing: every page lives under `/:lang/...` so URLs are shareable. The
+// default language is `en`; bare `/`, unknown paths, and unsupported `:lang`
+// values all redirect to `/en/home`. `LangRoot` validates `:lang` and syncs
+// `i18n.language` with the URL — see `src/routes/root.tsx`.
 const router = createBrowserRouter([
+  { path: "/", element: <Navigate to="/en/home" replace /> },
   {
-    path: "/",
-    element: <Root />,
+    path: "/:lang",
+    element: <LangRoot />,
     children: [
-      {
-        index: true,
-        element: <AboutMe />,
-      },
-
-      {
-        path: "resume",
-        element: <CV />,
-      },
-      {
-        path: "photos",
-        element: <Photos />,
-      },
+      { index: true, element: <Navigate to="home" replace /> },
+      { path: "home", element: <AboutMe /> },
+      { path: "resume", element: <CV /> },
+      { path: "photos", element: <Photos /> },
+      { path: "*", element: <Navigate to="/en/home" replace /> },
     ],
   },
+  { path: "*", element: <Navigate to="/en/home" replace /> },
 ]);
 
 createRoot(document.getElementById("root")!).render(

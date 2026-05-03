@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import { useState } from "react";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useComputedColorScheme } from "@mantine/core";
 import type { SupportedLanguages } from "@/i18n";
@@ -19,23 +20,39 @@ export type NavigationMainProps = Record<string, never>;
 
 export const NavigationMain: FC<NavigationMainProps> = () => {
   const { i18n, t } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { lang: currentLangParam } = useParams<{ lang: string }>();
   // Parent owns `menuOpen` so both `<TopBar />` (the trigger) and
   // `<MobileOverlay />` (the surface) see the same state without a shared
   // store or context.
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Resolve current state once: language + dark-mode flag are shared by both bars.
-  const currentLanguage = i18n.language.split("-")[0] as SupportedLanguages;
+  // Prefer the URL `:lang` param over `i18n.language` so the flag-row reflects
+  // what's actually in the address bar even before `LangRoot`'s sync effect runs.
+  const currentLanguage = (currentLangParam ??
+    i18n.language.split("-")[0]) as SupportedLanguages;
   const computedColorScheme = useComputedColorScheme("light");
   const isDark = computedColorScheme === "dark";
 
+  // Nav `href`s are *relative* to the parent `/:lang` route, so react-router
+  // resolves them to `/en/home`, `/de/home`, etc. without any string concat.
   const navLinks: ReadonlyArray<NavLinkItem> = [
-    { name: t("nav.aboutMe"), href: "/" },
+    { name: t("nav.aboutMe"), href: "home" },
     { name: t("nav.resume"), href: "resume" },
   ];
 
-  const handleLanguageChange = (language: SupportedLanguages) => {
-    i18n.changeLanguage(language);
+  // Switching language navigates to the same slug under the new locale (e.g.
+  // `/en/resume` -> `/de/resume`). `LangRoot`'s effect then calls
+  // `i18n.changeLanguage`, so we don't have to here.
+  const handleLanguageChange = (next: SupportedLanguages) => {
+    if (!currentLangParam) {
+      navigate(`/${next}/home`);
+      return;
+    }
+    const restOfPath = location.pathname.slice(`/${currentLangParam}`.length) || "/home";
+    navigate(`/${next}${restOfPath}`);
   };
 
   return (
