@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 /**
  * Two-line localized heading on the About Me page.
@@ -10,12 +10,20 @@ import { Trans } from "react-i18next";
  */
 export type AboutMeHeadingProps = Record<string, never>;
 
-export const AboutMeHeading: FC<AboutMeHeadingProps> = () => (
-  <div className="flex flex-col gap-2">
-    <h1 className="text-3xl md:text-5xl md:leading-normal leading-relaxed">
-      <Trans i18nKey="aboutMe.heading.foreword" components={{ strong: <strong /> }} />{" "}
-      <br className="hidden md:block" />{" "}
-      <Trans i18nKey="aboutMe.heading.role" components={{ strong: <strong /> }} />
-    </h1>
-  </div>
-);
+export const AboutMeHeading: FC<AboutMeHeadingProps> = () => {
+  // `<Trans>` reads i18n via `useContext` only and does not subscribe to
+  // `languageChanged`, so a parent that does (e.g. via `useTranslation`) must
+  // re-render this component for the heading to update. The route owner
+  // doesn't subscribe, so we subscribe here to make the heading reactive.
+  useTranslation();
+
+  return (
+    <div className="flex flex-col gap-2">
+      <h1 className="text-3xl md:text-5xl md:leading-normal leading-relaxed">
+        <Trans i18nKey="aboutMe.heading.foreword" components={{ strong: <strong /> }} />{" "}
+        <br className="hidden md:block" />{" "}
+        <Trans i18nKey="aboutMe.heading.role" components={{ strong: <strong /> }} />
+      </h1>
+    </div>
+  );
+};
