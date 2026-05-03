@@ -20,7 +20,10 @@ alwaysApply: false
 ## Typing props
 
 - Define **one `NameProps` interface per component** (name matches the component).
-- Add a **short JSDoc on every props interface** (what it represents, not obvious field-by-field noise).
+- Add a **short JSDoc on the props interface** (what it represents, one line).
+- Add a **single-line JSDoc above every property** that adds context the type alone doesn't carry: callback argument semantics and side-effects, enum/union domains in plain English, defaults for optional props, units, and notable invariants. Skip the JSDoc only when it would just restate the type (e.g. `/** Title. */ title: string`).
+- When a prop is **intentionally absent** from an interface (compared to a sibling component or the original API), leave a one-line `//` comment near the interface explaining why.
+- For components with **no props**, use `type NameProps = Record<string, never>;` (avoids the `@typescript-eslint/no-empty-object-type` lint from `tseslint.configs.recommended`) and a JSDoc that explains why the component takes no props.
 - When shapes overlap, **`interface X extends Y`** or **`Pick` / `Omit`** — **do not duplicate** the same fields across interfaces.
 
 ## Comments
