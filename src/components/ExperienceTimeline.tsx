@@ -1,30 +1,23 @@
+import type { FC } from "react";
 import { experience } from "@/data/experience";
-import { TimelineEntry } from "@/components/TimelineEntry";
-import { useTranslation } from "react-i18next";
+import { CvTimeline } from "@/components/cv/CvTimeline";
 
-export function ExperienceTimeline() {
-  const { t } = useTranslation();
+/**
+ * Experience section of the CV. Thin wrapper that binds the `experience`
+ * dataset and the `cvContent.experience` i18n root to `CvTimeline`.
+ *
+ * No props — `Record<string, never>` is used instead of an empty interface
+ * because `@typescript-eslint/no-empty-object-type` (from
+ * `tseslint.configs.recommended`) flags `interface Foo {}`.
+ */
+export type ExperienceTimelineProps = Record<string, never>;
 
-  return (
-    <section className="flex flex-col gap-8">
-      {experience.map((item) => {
-        const baseKey = `cvContent.experience.${item.id}`;
-        return (
-        <TimelineEntry
-          key={item.id}
-          title={t(`${baseKey}.company`)}
-          subtitle={t(`${baseKey}.role`)}
-          period={{
-            start: t(`${baseKey}.period.start`),
-            end: t(`${baseKey}.period.end`),
-          }}
-          highlight={t(`${baseKey}.highlight`)}
-          description={t(`${baseKey}.description`)}
-          technologies={item.technologies.map((pillKey) => t(`cvContent.pills.${pillKey}`))}
-          badgeColor="cyan"
-        />
-        );
-      })}
-    </section>
-  );
-}
+export const ExperienceTimeline: FC<ExperienceTimelineProps> = () => (
+  <CvTimeline
+    items={experience}
+    i18nRoot="cvContent.experience"
+    titleKey="company"
+    subtitleKey="role"
+    badgeColor="cyan"
+  />
+);
