@@ -2,7 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-$primary-color: #52b8d3;
+$primary-color: #007493;
+
+html {
+  color-scheme: light dark;
+}
+
+::selection {
+  background-color: $primary-color;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: $primary-color;
+  color: #ffffff;
+}
 
 @layer base {
   :root {
@@ -103,12 +117,22 @@ p {
 }
 
 .sportradar-link {
-  color: #f08a8a;
+  color: $primary-color;
   font-weight: 700;
   text-decoration: none;
 }
 
 .sportradar-link:hover {
-  color: #e46f6f;
+  color: lighten($primary-color, 10%);
   text-decoration: underline;
+}
+
+html[data-mantine-color-scheme="dark"] {
+  .sportradar-link {
+    color: lighten($primary-color, 20%);
+  }
+
+  .sportradar-link:hover {
+    color: lighten($primary-color, 30%);
+  }
 }

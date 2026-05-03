@@ -36,7 +36,27 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <MantineProvider defaultColorScheme="auto">
+    <MantineProvider
+      defaultColorScheme="auto"
+      theme={{
+        primaryColor: "brand",
+        primaryShade: { light: 6, dark: 5 },
+        colors: {
+          brand: [
+            "#e1f4f9",
+            "#c6e6ef",
+            "#9fcfdd",
+            "#74b8cb",
+            "#4fa5bc",
+            "#3699b3",
+            "#25889f",
+            "#0f768a",
+            "#006777",
+            "#005866",
+          ],
+        },
+      }}
+    >
       <RouterProvider router={router} />
       <Analytics />
     </MantineProvider>
