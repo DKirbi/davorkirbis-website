@@ -1,23 +1,27 @@
 import { useTranslation } from "react-i18next";
 import type { SupportedLanguages } from "@/i18n";
 import { supportedLanguages } from "@/i18n";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { NavLink, NavLinkRenderProps } from "react-router-dom";
-import { Switch, useComputedColorScheme, useMantineColorScheme } from "@mantine/core";
+import {
+  Menu,
+  Switch,
+  UnstyledButton,
+  useComputedColorScheme,
+  useMantineColorScheme,
+} from "@mantine/core";
 import { IconMoonStars, IconSun } from "@tabler/icons-react";
 import { NavLinkGroup } from "./link-components/Navigation-group";
 import { Logo } from "./logo/Logo";
 
-const NavLinks = [
-  {
-    name: "About me",
-    href: "/",
-  },
-  {
-    name: "Resume",
-    href: "resume",
-  },
-];
+const languageMetadata: Record<
+  SupportedLanguages,
+  { label: string; code: string; flagSrc: string }
+> = {
+  en: { label: "English", code: "EN", flagSrc: "https://flagcdn.com/w20/gb.png" },
+  de: { label: "Deutsch", code: "DE", flagSrc: "https://flagcdn.com/w20/de.png" },
+  sl: { label: "Slovenščina", code: "SL", flagSrc: "https://flagcdn.com/w20/si.png" },
+};
 
 const getNavLinkClassName = (
   { isActive, isPending }: NavLinkRenderProps,
@@ -30,26 +34,108 @@ const getNavLinkClassName = (
 };
 
 export const NavigationMain = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const currentLanguage = i18n.language.split("-")[0] as SupportedLanguages;
   const [menuOpen, setMenuOpen] = useState(false);
+  const languageButtonRef = useRef<HTMLButtonElement>(null);
   const { setColorScheme } = useMantineColorScheme();
   const computedColorScheme = useComputedColorScheme("light");
   const isDark = computedColorScheme === "dark";
+  const activeLanguage = languageMetadata[currentLanguage];
+  const navLinks = [
+    { name: t("nav.aboutMe"), href: "/" },
+    { name: t("nav.resume"), href: "resume" },
+  ];
 
-  const languageSwitcher = () => (
-    <div className="flex gap-1 text-sm items-center">
-      {supportedLanguages.map((lang, idx) => (
-        <span key={lang} className="flex items-center gap-1">
-          {idx > 0 && <span className="opacity-30">|</span>}
+  const desktopLanguageSwitcher = () => (
+    <Menu
+      position="bottom-end"
+      shadow="sm"
+      withinPortal={false}
+      offset={4}
+      styles={{ dropdown: { width: "max-content", minWidth: "unset" } }}
+    >
+      <Menu.Target>
+        <UnstyledButton
+          ref={languageButtonRef}
+          className={`hidden mobile:flex items-center gap-2 rounded-md px-2 py-1 text-sm ${
+            isDark ? "hover:bg-neutral-800" : "hover:bg-gray-100"
+          }`}
+          aria-label="Select language"
+        >
+          <img
+            src={activeLanguage.flagSrc}
+            alt={`${activeLanguage.label} flag`}
+            className="h-3 w-5 rounded-[2px] object-cover"
+            loading="lazy"
+          />
+          <span className="uppercase tracking-wide">{activeLanguage.code}</span>
+        </UnstyledButton>
+      </Menu.Target>
+      <Menu.Dropdown>
+        {supportedLanguages.map((lang) => {
+          const language = languageMetadata[lang];
+          const isActiveLanguage = currentLanguage === lang;
+          return (
+            <Menu.Item
+              key={lang}
+              onClick={() => i18n.changeLanguage(lang)}
+              className={`pr-3 ${
+                isActiveLanguage
+                  ? isDark
+                    ? "bg-neutral-800 hover:bg-neutral-700"
+                    : "bg-gray-200 hover:bg-gray-300"
+                  : isDark
+                    ? "hover:bg-neutral-800"
+                    : "hover:bg-gray-100"
+              }`}
+              leftSection={
+                <img
+                  src={language.flagSrc}
+                  alt={`${language.label} flag`}
+                  className="h-3 w-5 rounded-[2px] object-cover"
+                  loading="lazy"
+                />
+              }
+            >
+              <span
+                className={`uppercase text-xs tracking-wide ${
+                  isActiveLanguage ? "font-semibold" : "font-normal"
+                }`}
+              >
+                {language.code}
+              </span>
+            </Menu.Item>
+          );
+        })}
+      </Menu.Dropdown>
+    </Menu>
+  );
+
+  const mobileLanguageSwitcher = () => (
+    <div className="flex mobile:hidden gap-2 items-center">
+      {supportedLanguages.map((lang) => {
+        const language = languageMetadata[lang];
+        return (
           <button
+            key={lang}
             onClick={() => i18n.changeLanguage(lang)}
-            className={currentLanguage === lang ? "font-bold" : "opacity-40 hover:opacity-70"}
+            className={`rounded-sm transition-opacity ${
+              currentLanguage === lang
+                ? "opacity-100 ring-1 ring-neutral-500"
+                : "opacity-60 hover:opacity-90"
+            }`}
+            aria-label={`Switch language to ${language.label}`}
           >
-            {lang.toUpperCase()}
+            <img
+              src={language.flagSrc}
+              alt={`${language.label} flag`}
+              className="h-3 w-5 rounded-[2px] object-cover"
+              loading="lazy"
+            />
           </button>
-        </span>
-      ))}
+        );
+      })}
     </div>
   );
 
@@ -67,7 +153,8 @@ export const NavigationMain = () => {
 
   const rightControls = () => (
     <div className="flex gap-3 items-center">
-      {languageSwitcher()}
+      {desktopLanguageSwitcher()}
+      {mobileLanguageSwitcher()}
       {themeSwitcher()}
     </div>
   );
@@ -82,7 +169,7 @@ export const NavigationMain = () => {
             {/* Desktop links */}
             <NavLinkGroup>
               <div className="hidden mobile:flex">
-                {NavLinks.map((navLink, index) => (
+                {navLinks.map((navLink, index) => (
                   <NavLink
                     key={index}
                     to={navLink.href}
@@ -102,17 +189,23 @@ export const NavigationMain = () => {
               aria-label={menuOpen ? "Close menu" : "Open menu"}
             >
               <span
-                className={`block h-0.5 w-6 bg-neutral-700 transition-all duration-300 origin-center ${
+                className={`block h-0.5 w-6 transition-all duration-300 origin-center ${
+                  isDark ? "bg-neutral-100" : "bg-neutral-700"
+                } ${
                   menuOpen ? "translate-y-[9px] rotate-45" : ""
                 }`}
               />
               <span
-                className={`block h-0.5 w-6 bg-neutral-700 transition-all duration-300 ${
+                className={`block h-0.5 w-6 transition-all duration-300 ${
+                  isDark ? "bg-neutral-100" : "bg-neutral-700"
+                } ${
                   menuOpen ? "opacity-0" : ""
                 }`}
               />
               <span
-                className={`block h-0.5 w-6 bg-neutral-700 transition-all duration-300 origin-center ${
+                className={`block h-0.5 w-6 transition-all duration-300 origin-center ${
+                  isDark ? "bg-neutral-100" : "bg-neutral-700"
+                } ${
                   menuOpen ? "-translate-y-[9px] -rotate-45" : ""
                 }`}
               />
@@ -127,7 +220,7 @@ export const NavigationMain = () => {
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        {NavLinks.map((navLink, index) => (
+        {navLinks.map((navLink, index) => (
           <NavLink
             key={index}
             to={navLink.href}
