@@ -1,0 +1,41 @@
+---
+description: React + TypeScript component standards and end-of-work commit workflow for this repo.
+globs: src/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# React component standards (TypeScript)
+
+## Component-driven / “Lego” UI
+
+- Prefer **small, single-purpose components** composed upward into larger UIs.
+- **Route files stay thin**: mostly wire data/routing and compose children; avoid large inline JSX trees and heavy logic in route modules.
+
+## Component declaration
+
+- Use **`const Name: FC<NameProps> = …`** (arrow function assigned to a const).
+- Import React types with **`import type { FC, PropsWithChildren } from "react"`**.
+- When a component accepts **`children`**, type props with **`PropsWithChildren<YourProps>`** (or equivalent) instead of ad-hoc `children?: ReactNode` unless the rest of the codebase already standardises otherwise.
+
+## Typing props
+
+- Define **one `NameProps` interface per component** (name matches the component).
+- Add a **short JSDoc on every props interface** (what it represents, not obvious field-by-field noise).
+- When shapes overlap, **`interface X extends Y`** or **`Pick` / `Omit`** — **do not duplicate** the same fields across interfaces.
+
+## Comments
+
+- Add a **brief comment above each logical block**: effects, data fetching, non-trivial branches, and **grouped JSX sections** (e.g. header vs body).
+- Avoid **line-by-line** or obvious comments.
+
+## Exports and exceptions
+
+- **`src/i18n.ts`**: keep the **default export** as it is today; do not refactor it for named-export preference alone.
+- **Route files**: **`export default`** is allowed when the **router/framework requires it**; otherwise prefer clarity and local conventions.
+- For **reusable building blocks** (components, hooks helpers used across features), **prefer named exports** unless a default is required by the tool chain.
+
+## End of substantive work — commits
+
+Before considering a task finished, **ask the user** whether they want help **splitting work into categorised commits** (examples: `chore(cursor)`, `refactor(navigation)`, `feat(about)`, `fix(photos)`). Suggest sensible **groupings and commit messages**.
+
+- **Do not run `git commit`** (or otherwise commit) **unless the user explicitly asks** to commit.
