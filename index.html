@@ -5,8 +5,25 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Tell the UA we handle light/dark ourselves so mobile Chromium does not apply forced "auto dark" on top -->
+    <!-- Baseline "light" helps Chromium-family browsers (Brave, Chrome) avoid auto-darkening the page; your toggle still sets dark via Mantine on the root element. -->
     <meta name="color-scheme" content="light" />
+    <!-- Same logic as @mantine/core ColorSchemeScript: set data-mantine-color-scheme before React hydrates (localStorage key must match Mantine). -->
+    <script data-mantine-script="true">
+      try {
+        var _colorScheme = window.localStorage.getItem("mantine-color-scheme-value");
+        var colorScheme =
+          _colorScheme === "light" || _colorScheme === "dark" || _colorScheme === "auto"
+            ? _colorScheme
+            : "light";
+        var computedColorScheme =
+          colorScheme !== "auto"
+            ? colorScheme
+            : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        document.documentElement.setAttribute("data-mantine-color-scheme", computedColorScheme);
+      } catch (e) {}
+    </script>
     <title>Davor Kirbiš | UX Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
