@@ -1,4 +1,4 @@
-import { Blockquote, Button, ThemeIcon } from "@mantine/core";
+import { Blockquote, Button, Card, ThemeIcon } from "@mantine/core";
 import {
   IconBrandFlickr,
   IconBrandGithubFilled,
@@ -12,8 +12,8 @@ import { Trans, useTranslation } from "react-i18next";
 export const AboutMe = () => {
   const { t } = useTranslation();
   return (
-    <div className="w-11/12 mx-auto pt-16">
-      <div className="hero-page flex flex-col px-16 md:px-0 md:flex-row justify-center gap-8 ">
+    <div className="grid grid-cols-1 w-11/12 mx-auto md:grid-cols-2 gap-10 md:gap-40 pt-16">
+      <div className="hero-page flex flex-col justify-start">
         <div className="flex flex-col gap-10 align-center">
           <img
             src={`${Avatar}`}
@@ -28,7 +28,7 @@ export const AboutMe = () => {
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
-                <ThemeIcon size="lg" variant="filled" color="cyan">
+                <ThemeIcon size="lg" variant="filled">
                   <IconBrandLinkedin style={{ width: "70%", height: "70%" }} stroke={1.5} />
                 </ThemeIcon>
               </a>
@@ -38,7 +38,7 @@ export const AboutMe = () => {
                 rel="noopener noreferrer"
                 aria-label="Flickr"
               >
-                <ThemeIcon size="lg" variant="filled" color="cyan">
+                <ThemeIcon size="lg" variant="filled">
                   <IconBrandFlickr style={{ width: "70%", height: "70%" }} stroke={1.5} />
                 </ThemeIcon>
               </a>
@@ -48,12 +48,12 @@ export const AboutMe = () => {
                 rel="noopener noreferrer"
                 aria-label="GitHub"
               >
-                <ThemeIcon size="lg" variant="filled" color="cyan">
+                <ThemeIcon size="lg" variant="filled">
                   <IconBrandGithubFilled style={{ width: "70%", height: "70%" }} stroke={1.5} />
                 </ThemeIcon>
               </a>
               <a href="mailto:davor.kirbis@gmail.com" aria-label="Email">
-                <ThemeIcon size="lg" variant="filled" color="cyan">
+                <ThemeIcon size="lg" variant="filled">
                   <IconMailFilled style={{ width: "70%", height: "70%" }} stroke={1.5} />
                 </ThemeIcon>
               </a>
@@ -62,7 +62,6 @@ export const AboutMe = () => {
               className="self-center"
               fullWidth={false}
               variant="outline"
-              color="cyan"
               rightSection={<IconDownload size={14} />}
               component="a"
               href="/CV_DavorK.pdf"
@@ -73,15 +72,17 @@ export const AboutMe = () => {
             </Button>
           </div>
         </div>
-        <div className="flex flex-col gap-4">
-          <div className="flex flex-col gap-2">
-            <h1 className="text-3xl md:text-5xl md:leading-normal leading-relaxed">
-              <Trans i18nKey="aboutMe.heading.foreword" components={{ strong: <strong /> }} />{" "}
-              <br className="hidden md:block" />{" "}
-              <Trans i18nKey="aboutMe.heading.role" components={{ strong: <strong /> }} />
-            </h1>
-          </div>
+      </div>
+      <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-2">
+          <h1 className="text-3xl md:text-5xl md:leading-normal leading-relaxed">
+            <Trans i18nKey="aboutMe.heading.foreword" components={{ strong: <strong /> }} />{" "}
+            <br className="hidden md:block" />{" "}
+            <Trans i18nKey="aboutMe.heading.role" components={{ strong: <strong /> }} />
+          </h1>
+        </div>
 
+        <Card shadow="sm" padding="lg" radius="md">
           <p className="text-lg leading-relaxed">
             <Trans
               i18nKey="aboutMe.ExperienceParagraph.p1"
@@ -104,10 +105,8 @@ export const AboutMe = () => {
           <p className="text-lg leading-relaxed">
             <Trans i18nKey="aboutMe.ExperienceParagraph.p3" components={{ strong: <strong /> }} />
           </p>
-          <Blockquote color="cyan" mt="xl">
-            {t("aboutMe.hobbies")}
-          </Blockquote>
-        </div>
+          <Blockquote mt="xl">{t("aboutMe.hobbies")}</Blockquote>
+        </Card>
       </div>
     </div>
   );
