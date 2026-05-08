@@ -8,7 +8,7 @@ import {
 } from "@tabler/icons-react";
 
 /**
- * Row of external profile / contact icons on the About Me hero.
+ * Row of external profile / contact icons (site footer).
  *
  * No props — the four destinations (LinkedIn, Flickr, GitHub, mailto) are
  * stable for the personal site. Promote to a `links` prop the moment a

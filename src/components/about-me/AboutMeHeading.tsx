@@ -21,7 +21,7 @@ export const AboutMeHeading: FC<AboutMeHeadingProps> = () => {
     <div className="flex flex-col gap-2">
       <h1 className="text-3xl md:text-5xl md:leading-normal leading-relaxed">
         <Trans i18nKey="aboutMe.heading.foreword" components={{ strong: <strong /> }} />{" "}
-        <br className="hidden md:block" />{" "}
+        <br className="hidden sm:block" />{" "}
         <Trans i18nKey="aboutMe.heading.role" components={{ strong: <strong /> }} />
       </h1>
     </div>

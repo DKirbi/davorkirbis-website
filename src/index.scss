@@ -58,6 +58,14 @@ html[data-mantine-color-scheme="dark"] .nav-surface {
   background-color: #343434;
 }
 
+.footer-surface {
+  background-color: #e2e2e2;
+}
+
+html[data-mantine-color-scheme="dark"] .footer-surface {
+  background-color: #0d0d0d;
+}
+
 html[data-mantine-color-scheme="dark"] .logo-svg path {
   fill: #ffffff;
 }
@@ -91,9 +99,13 @@ img {
 }
 
 #root {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 54px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 54px 0 0;
 }
 
 p {

@@ -1,4 +1,8 @@
 {
+  "footer": {
+    "copyright": "© {{year}} Davor Kirbis",
+    "sitemapLabel": "Seitenübersicht"
+  },
   "nav": {
     "aboutMe": "Über mich",
     "resume": "Lebenslauf",

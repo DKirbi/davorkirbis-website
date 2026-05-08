@@ -10,7 +10,8 @@ import LangRoot from "./routes/root";
 import { AboutMe } from "./routes/about-me";
 
 import { CV } from "./routes/cv";
-import { Photos } from "./routes/photos";
+// Re-enable when the Photos page ships:
+// import { Photos } from "./routes/photos";
 import "@mantine/core/styles.css";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       { index: true, element: <Navigate to="home" replace /> },
       { path: "home", element: <AboutMe /> },
       { path: "resume", element: <CV /> },
-      { path: "photos", element: <Photos /> },
+      // { path: "photos", element: <Photos /> },
       { path: "*", element: <Navigate to="/en/home" replace /> },
     ],
   },
@@ -57,8 +58,10 @@ createRoot(document.getElementById("root")!).render(
         },
       }}
     >
-      <RouterProvider router={router} />
-      <Analytics />
+      <div className="flex min-h-0 w-full flex-1 flex-col">
+        <RouterProvider router={router} />
+        <Analytics />
+      </div>
     </MantineProvider>
   </StrictMode>,
 );

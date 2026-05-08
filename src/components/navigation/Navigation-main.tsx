@@ -6,7 +6,7 @@ import { useComputedColorScheme } from "@mantine/core";
 import type { SupportedLanguages } from "@/i18n";
 import { TopBar } from "@/components/navigation/top-bar";
 import { MobileOverlay } from "@/components/navigation/mobile-overlay";
-import type { NavLinkItem } from "@/components/navigation/nav-links";
+import { getPrimaryNavLinks } from "@/components/navigation/primary-nav-links";
 
 /**
  * Top-level navigation: composes the fixed top bar with the mobile overlay.
@@ -38,10 +38,7 @@ export const NavigationMain: FC<NavigationMainProps> = () => {
 
   // Nav `href`s are *relative* to the parent `/:lang` route, so react-router
   // resolves them to `/en/home`, `/de/home`, etc. without any string concat.
-  const navLinks: ReadonlyArray<NavLinkItem> = [
-    { name: t("nav.aboutMe"), href: "home" },
-    { name: t("nav.resume"), href: "resume" },
-  ];
+  const navLinks = getPrimaryNavLinks(t);
 
   // Switching language navigates to the same slug under the new locale (e.g.
   // `/en/resume` -> `/de/resume`). `LangRoot`'s effect then calls
