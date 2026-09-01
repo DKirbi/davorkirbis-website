@@ -1,5 +1,6 @@
 export type CvPillKey =
   | "react"
+  | "reactJs"
   | "typescript"
   | "javascript"
   | "nodeJs"
@@ -19,6 +20,7 @@ export type CvPillKey =
   | "storybook"
   | "mantine"
   | "zeplin"
+  | "ux"
   | "uxDesign"
   | "uiDesign"
   | "interactionDesign"
@@ -38,16 +40,42 @@ export type CvPillKey =
   | "jquery"
   | "arduino"
   | "maxMsp"
-  | "guiManual";
+  | "guiManual"
+  | "kotlin"
+  | "quarkus"
+  | "vite"
+  | "shadcn"
+  | "tailwindCss"
+  | "rapidAgenticDevelopment";
 
 export type ExperienceItem = {
   id: string;
   technologies: CvPillKey[];
+  /** Optional public project shown as a GitHub icon + label under the description. */
+  projectLink?: {
+    /** Absolute URL opened in a new tab. */
+    href: string;
+  };
 };
 
 export const experience: ExperienceItem[] = [
   {
     id: "sportradar",
+    projectLink: { href: "https://github.com/DKirbi/SketchFlow-AI" },
+    technologies: [
+      "reactJs",
+      "kotlin",
+      "quarkus",
+      "vite",
+      "shadcn",
+      "tailwindCss",
+      "ux",
+      "designSystems",
+      "rapidAgenticDevelopment",
+    ],
+  },
+  {
+    id: "sportradarUx",
     technologies: [
       "react",
       "typescript",

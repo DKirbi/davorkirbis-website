@@ -15,6 +15,11 @@ export interface CvTimelineItem {
   id: string;
   /** Pill keys resolved against `cvContent.pills.{key}`. Optional because education entries can omit them. */
   technologies?: CvPillKey[];
+  /** Public project URL. Label and blurb come from `{i18nRoot}.{id}.projectLink.*`. */
+  projectLink?: {
+    /** Absolute URL opened in a new tab. */
+    href: string;
+  };
 }
 
 /**
@@ -55,6 +60,15 @@ export const CvTimeline: FC<CvTimelineProps> = ({
           t(`cvContent.pills.${pillKey}`),
         );
 
+        // Resolve the optional GitHub row only when this item declares a URL.
+        const projectLink = item.projectLink
+          ? {
+              href: item.projectLink.href,
+              label: t(`${baseKey}.projectLink.label`),
+              description: t(`${baseKey}.projectLink.description`),
+            }
+          : undefined;
+
         return (
           <TimelineEntry
             key={item.id}
@@ -66,6 +80,7 @@ export const CvTimeline: FC<CvTimelineProps> = ({
             }}
             highlight={t(`${baseKey}.highlight`)}
             description={t(`${baseKey}.description`)}
+            projectLink={projectLink}
             technologies={technologies}
             badgeColor={badgeColor}
           />

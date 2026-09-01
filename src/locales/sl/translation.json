@@ -28,10 +28,21 @@
     "experience": {
       "sportradar": {
         "company": "Sportradar d.o.o.",
+        "role": "Senior Software Engineer",
+        "period": { "start": "jan. 2026", "end": "Danes" },
+        "highlight": "V ekipi Transformers pomagam ustvarjati orodja za vmesnike za vnos podatkov — ko so se prioritete spremenile, sem prevzel vlogo Full Stack inženirja s Kotlinom in Quarkusom.",
+        "description": "Delujem v ekipi Transformers, kjer pomagam graditi orodja za vmesnike za vnos podatkov. Ko so se prioritete ekipe spremenile, sem prevzel vlogo Full Stack inženirja in sprejel agentni razvoj s Kotlinom in Quarkusom — dostavo čez celoten stack v tesnejšem ritmu. Še vedno vsakodnevno prispevam v Reactu in Viteju ter v delo prinašam UX in UI presojo: tesnejšo validacijo obrazcev, jasnejša besedila tooltipov in validacijska pravila, ki gredo čez obseg ticketov, da pokrijejo robne primere, s katerimi se operaterji res srečajo.\n\nKo produkt to potrebuje, UX in UI delo še vedno prevzamem sam. Delo, na katerega sem najbolj ponosen, je SketchFlow: UX in UI vzorce iz produktov, ki smo jih že izdali, sem spremenil v ogrodje, ki drži agentni razvoj na tirnicah. Modeli ostanejo znotraj pravil, ki smo jih napisali, namesto da bi ob vsakem promptu izumili drug produkt.\n\nZgradil sem konservativen lo-fi design sistem na ShadCN-navdihnjeni strukturi s Tailwindom — sivine, zadržan, isti vizualni jezik čez prototipe. Leta NDA pogodb so pravo delo držala stran od javnega portfolia. SketchFlow je način, kako ga vseeno pokažem: rekonstruirati UX tok funkcionalnosti, preusmeriti mock podatke, da poslovna ideja ostane zasebna, in vseeno postaviti interakcijski dizajn pred vsakogar, ki želi videti, kako razmišljam.",
+        "projectLink": {
+          "label": "SketchFlow-AI",
+          "description": "Ogrodje lo-fi UX vzorcev za agentno prototipiranje."
+        }
+      },
+      "sportradarUx": {
+        "company": "Sportradar d.o.o.",
         "role": "Senior UX Engineer",
-        "period": { "start": "feb. 2023", "end": "Danes" },
-        "highlight": "Product Designer v cross-functional ekipi in Tech Lead za Podium — oblikujem UX interna orodja in AI-podprte prototipne delovne tokove, hkrati pa skaliram React UI knjižnico, ki jo uporablja 120+ razvijalcev v 50+ produkcijskih okoljih.",
-        "description": "Trenutno delujem kot Product Designer v cross-functional ekipi, kjer načrtujem vmesnike za interna orodja športnih operaterjev — od UX raziskav in prototipiranja do tesnega sodelovanja z inženirji pri izvedbi. Hkrati dokumentiram UX in UI vzorce naših vmesnikov ter jih prevajam v Cursor/Copilot okvire pravil in skillov, da lahko frontend razvijalci in oblikovalci ustvarjajo tako low-fidelity kot high-fidelity prototipe novih orodij in funkcionalnosti.\n\nVodil sem razvoj Podiuma, Sportradarjevega internega React design sistema, kot Design Technologist in vodja razvoja. Odgovoren sem bil za arhitekturo komponent, API dizajn in razvijalsko izkušnjo, da knjižnica zanesljivo skalira v veliki, porazdeljeni inženirski organizaciji.\n\nMentoriral sem frontend inženirja v ekipi in vzpostavil model prispevkov, ki razvijalcem iz drugih ekip omogoča samozavestno širitev sistema. Sprejetje sem spodbujal z ustvarjanjem berljive dokumentacije, širjenjem skupnosti in neposredno podporo."
+        "period": { "start": "feb. 2023", "end": "jan. 2026" },
+        "highlight": "Product Designer v cross-functional ekipi in Tech Lead za Podium — oblikoval sem UX interna orodja in AI-podprte prototipne delovne tokove, hkrati pa skaliral React UI knjižnico, ki jo uporablja 120+ razvijalcev v 50+ produkcijskih okoljih.",
+        "description": "Deloval sem kot Product Designer v cross-functional ekipi, kjer sem načrtoval vmesnike za interna orodja športnih operaterjev — od UX raziskav in prototipiranja do tesnega sodelovanja z inženirji pri izvedbi. Hkrati sem dokumentiral UX in UI vzorce naših vmesnikov ter jih prevajal v Cursor/Copilot okvire pravil in skillov, da lahko frontend razvijalci in oblikovalci ustvarjajo tako low-fidelity kot high-fidelity prototipe novih orodij in funkcionalnosti.\n\nVodil sem razvoj Podiuma, Sportradarjevega internega React design sistema, kot Design Technologist in vodja razvoja. Odgovoren sem bil za arhitekturo komponent, API dizajn in razvijalsko izkušnjo, da knjižnica zanesljivo skalira v veliki, porazdeljeni inženirski organizaciji.\n\nMentoriral sem frontend inženirja v ekipi in vzpostavil model prispevkov, ki razvijalcem iz drugih ekip omogoča samozavestno širitev sistema. Sprejetje sem spodbujal z ustvarjanjem berljive dokumentacije, širjenjem skupnosti in neposredno podporo."
       },
       "chiliDigital": {
         "company": "ChiliDigital",
@@ -108,6 +119,14 @@
     },
     "pills": {
       "react": "React",
+      "reactJs": "ReactJS",
+      "kotlin": "Kotlin",
+      "quarkus": "Quarkus",
+      "vite": "Vite",
+      "shadcn": "ShadCN",
+      "tailwindCss": "Tailwind CSS",
+      "ux": "UX / UI",
+      "rapidAgenticDevelopment": "Hiter agentni razvoj",
       "typescript": "TypeScript",
       "javascript": "JavaScript",
       "nodeJs": "Node.js",

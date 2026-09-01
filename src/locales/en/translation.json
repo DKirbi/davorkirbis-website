@@ -28,10 +28,21 @@
     "experience": {
       "sportradar": {
         "company": "Sportradar d.o.o.",
+        "role": "Senior Software Engineer",
+        "period": { "start": "Jan 2026", "end": "Present" },
+        "highlight": "On the Transformers team I help ship data-entry interfaces — and as priorities shifted, I moved into a Full Stack Engineer role with Kotlin and Quarkus.",
+        "description": "I work on the Transformers team, helping build the tools behind our data-entry interfaces. As team priorities shifted, I stepped into a Full Stack Engineer role and adopted agentic development with Kotlin and Quarkus — shipping across the stack in a tighter loop. I still contribute daily in React and Vite, carrying UX and UI judgment into the work: tighter form validation, clearer tooltip copy, and validation rules pushed past the ticket to cover edge cases operators actually hit.\n\nWhen the product needs it, I still take the UX and UI work myself. The piece I am proudest of is SketchFlow: I turned the UX and UI patterns from products we had already shipped into a framework that keeps agentic development on the rails. Models stay inside the rules we wrote, instead of inventing a different product every prompt.\n\nI built a conservative lo-fi design system on a ShadCN-inspired structure with Tailwind — grayscale, restrained, the same visual language across prototypes. Years of NDAs kept the real work off a public portfolio. SketchFlow is how I show it anyway: reconstruct the UX flow of a feature, retarget the mock data so the business idea stays private, and still put the interaction design in front of anyone who wants to see how I think.",
+        "projectLink": {
+          "label": "SketchFlow-AI",
+          "description": "A low-fidelity UX patterns framework for agentic prototyping."
+        }
+      },
+      "sportradarUx": {
+        "company": "Sportradar d.o.o.",
         "role": "Senior UX Engineer",
-        "period": { "start": "Feb 2023", "end": "Present" },
-        "highlight": "Product Designer and Tech Lead for Podium — shaping internal tool UX and AI-enabled prototyping workflows while scaling a React UI library adopted by 120+ developers across 50+ production environments.",
-        "description": "I currently work as a Product Designer in a cross-functional squad, designing interfaces for internal tools used by sports operators through UX research, prototyping, and close collaboration with engineers during delivery. I also document UX and UI patterns across our interfaces and translate them into Cursor/Copilot rule-and-skill frameworks, enabling frontend developers and designers to produce both low-fidelity and high-fidelity prototypes for new tools and features.\n\nLed the evolution of Podium, Sportradar's internal React design system, as both contributor and Tech Lead. Owned component architecture, API design, and developer experience — ensuring the library scaled reliably across a large, distributed engineering organisation.\n\nMentored a frontend engineer embedded in the team and built a contribution model that enabled developers from other teams to extend the system confidently. Drove adoption through documentation, office hours, and direct support."
+        "period": { "start": "Feb 2023", "end": "Jan 2026" },
+        "highlight": "Product Designer and Tech Lead for Podium — shaped internal tool UX and AI-enabled prototyping workflows while scaling a React UI library adopted by 120+ developers across 50+ production environments.",
+        "description": "I worked as a Product Designer in a cross-functional squad, designing interfaces for internal tools used by sports operators through UX research, prototyping, and close collaboration with engineers during delivery. I also documented UX and UI patterns across our interfaces and translated them into Cursor/Copilot rule-and-skill frameworks, enabling frontend developers and designers to produce both low-fidelity and high-fidelity prototypes for new tools and features.\n\nLed the evolution of Podium, Sportradar's internal React design system, as both contributor and Tech Lead. Owned component architecture, API design, and developer experience — ensuring the library scaled reliably across a large, distributed engineering organisation.\n\nMentored a frontend engineer embedded in the team and built a contribution model that enabled developers from other teams to extend the system confidently. Drove adoption through documentation, office hours, and direct support."
       },
       "chiliDigital": {
         "company": "ChiliDigital",
@@ -108,6 +119,14 @@
     },
     "pills": {
       "react": "React",
+      "reactJs": "ReactJS",
+      "kotlin": "Kotlin",
+      "quarkus": "Quarkus",
+      "vite": "Vite",
+      "shadcn": "ShadCN",
+      "tailwindCss": "Tailwind CSS",
+      "ux": "UX / UI",
+      "rapidAgenticDevelopment": "Rapid Agentic Development",
       "typescript": "TypeScript",
       "javascript": "JavaScript",
       "nodeJs": "Node.js",

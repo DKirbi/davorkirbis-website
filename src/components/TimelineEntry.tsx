@@ -1,5 +1,16 @@
 import type { FC } from "react";
 import { Badge, Card, MantineColor } from "@mantine/core";
+import { IconBrandGithubFilled } from "@tabler/icons-react";
+
+/** Optional public project row rendered under the description. */
+export interface TimelineProjectLink {
+  /** Absolute URL opened in a new tab. */
+  href: string;
+  /** Visible link text (e.g. repository name). */
+  label: string;
+  /** One-line project blurb shown beside/under the link. */
+  description: string;
+}
 
 /** Single CV timeline card (used for both education and experience entries). */
 export interface TimelineEntryProps {
@@ -17,6 +28,8 @@ export interface TimelineEntryProps {
   technologies?: string[];
   /** Mantine color applied to the technology badges. Defaults to `"cyan"`. */
   badgeColor?: MantineColor;
+  /** GitHub project row; hidden when omitted. */
+  projectLink?: TimelineProjectLink;
 }
 
 export const TimelineEntry: FC<TimelineEntryProps> = ({
@@ -27,6 +40,7 @@ export const TimelineEntry: FC<TimelineEntryProps> = ({
   description,
   technologies,
   badgeColor = "cyan",
+  projectLink,
 }) => {
   const mutedTextClass = "text-muted-foreground dark:text-[hsl(240_5%_78%)]";
 
@@ -56,6 +70,28 @@ export const TimelineEntry: FC<TimelineEntryProps> = ({
           </p>
         ))}
       </div>
+
+      {/* Optional public project: GitHub icon + label, then a one-line blurb */}
+      {projectLink && (
+        <div className="mt-3">
+          <a
+            className="sportradar-link inline-flex items-center gap-1.5 text-sm"
+            href={projectLink.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconBrandGithubFilled
+              aria-hidden
+              size={16}
+              className="shrink-0"
+            />
+            {projectLink.label}
+          </a>
+          <p className={`text-sm leading-normal mt-0.5 ${mutedTextClass}`}>
+            {projectLink.description}
+          </p>
+        </div>
+      )}
 
       {/* Footer: technology pills */}
       {technologies && technologies.length > 0 && (

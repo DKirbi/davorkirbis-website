@@ -29,10 +29,21 @@
     "experience": {
       "sportradar": {
         "company": "Sportradar d.o.o.",
+        "role": "Senior Software Engineer",
+        "period": { "start": "Jan. 2026", "end": "Heute" },
+        "highlight": "Im Transformers-Team helfe ich, Tools für unsere Dateneingabe-Interfaces zu bauen — und als sich die Prioritäten verschoben, wechselte ich in eine Full-Stack-Engineer-Rolle mit Kotlin und Quarkus.",
+        "description": "Ich arbeite im Transformers-Team und helfe, die Tools hinter unseren Dateneingabe-Interfaces zu bauen. Als sich die Team-Prioritäten verschoben, wechselte ich in eine Full-Stack-Engineer-Rolle und übernahm agentische Entwicklung mit Kotlin und Quarkus — und lieferte so über den gesamten Stack in einem engeren Takt. Ich trage weiterhin täglich in React und Vite bei und bringe UX- und UI-Urteilsvermögen in die Arbeit: präzisere Formularvalidierung, klarere Tooltip-Texte und Validierungsregeln, die über das Ticket hinausgehen, um Edge Cases abzudecken, die Operatoren tatsächlich treffen.\n\nWenn das Produkt es braucht, übernehme ich die UX- und UI-Arbeit weiterhin selbst. Das Stück, auf das ich am stolzesten bin, ist SketchFlow: Ich habe die UX- und UI-Patterns aus Produkten, die wir bereits ausgeliefert hatten, in ein Framework gegossen, das agentische Entwicklung auf Kurs hält. Modelle bleiben innerhalb der Regeln, die wir geschrieben haben, statt bei jedem Prompt ein anderes Produkt zu erfinden.\n\nIch habe ein konservatives Lo-Fi-Designsystem auf einer ShadCN-inspirierten Struktur mit Tailwind gebaut — Graustufen, zurückhaltend, dieselbe visuelle Sprache über alle Prototypen hinweg. Jahre von NDAs hielten die echte Arbeit von einem öffentlichen Portfolio fern. SketchFlow ist der Weg, sie trotzdem zu zeigen: den UX-Flow eines Features rekonstruieren, die Mock-Daten umwidmen, damit die Geschäftsidee privat bleibt, und das Interaktionsdesign trotzdem vor jeden stellen, der sehen will, wie ich denke.",
+        "projectLink": {
+          "label": "SketchFlow-AI",
+          "description": "Ein Low-Fidelity-UX-Patterns-Framework für agentisches Prototyping."
+        }
+      },
+      "sportradarUx": {
+        "company": "Sportradar d.o.o.",
         "role": "Senior UX Engineer",
-        "period": { "start": "Feb. 2023", "end": "Heute" },
-        "highlight": "Product Designer und Tech Lead für Podium — ich gestalte UX für interne Tools und AI-gestützte Prototyping-Workflows und skaliere gleichzeitig eine React-UI-Bibliothek, die von 120+ Entwicklern in 50+ Produktivumgebungen genutzt wird.",
-        "description": "Aktuell arbeite ich als Product Designer in einem cross-funktionalen Squad und entwerfe Interfaces für interne Tools von Sportoperatoren — inklusive UX-Research, Prototyping und enger Zusammenarbeit mit Engineers in der Umsetzung. Außerdem dokumentiere ich UX- und UI-Patterns über unsere Interfaces hinweg und übersetze sie in Cursor/Copilot-Regel- und Skill-Frameworks, damit Frontend-Entwickler und Designer sowohl Low-Fidelity- als auch High-Fidelity-Prototypen für neue Tools und Features erstellen können.\n\nIch habe die Weiterentwicklung von Podium, Sportradars internem React-Designsystem, als Contributor und Tech Lead vorangetrieben. Dabei verantwortete ich Komponentenarchitektur, API-Design und Developer Experience, damit die Bibliothek in einer großen, verteilten Engineering-Organisation zuverlässig skaliert.\n\nIch mentorierte einen Frontend Engineer im Team und etablierte ein Contribution-Modell, mit dem Entwickler aus anderen Teams das System sicher erweitern konnten. Die Akzeptanz steigerte ich durch Dokumentation, Office Hours und direkte Unterstützung."
+        "period": { "start": "Feb. 2023", "end": "Jan. 2026" },
+        "highlight": "Product Designer und Tech Lead für Podium — ich gestaltete UX für interne Tools und AI-gestützte Prototyping-Workflows und skalierte gleichzeitig eine React-UI-Bibliothek, die von 120+ Entwicklern in 50+ Produktivumgebungen genutzt wird.",
+        "description": "Ich arbeitete als Product Designer in einem cross-funktionalen Squad und entwarf Interfaces für interne Tools von Sportoperatoren — inklusive UX-Research, Prototyping und enger Zusammenarbeit mit Engineers in der Umsetzung. Außerdem dokumentierte ich UX- und UI-Patterns über unsere Interfaces hinweg und übersetzte sie in Cursor/Copilot-Regel- und Skill-Frameworks, damit Frontend-Entwickler und Designer sowohl Low-Fidelity- als auch High-Fidelity-Prototypen für neue Tools und Features erstellen können.\n\nIch habe die Weiterentwicklung von Podium, Sportradars internem React-Designsystem, als Contributor und Tech Lead vorangetrieben. Dabei verantwortete ich Komponentenarchitektur, API-Design und Developer Experience, damit die Bibliothek in einer großen, verteilten Engineering-Organisation zuverlässig skaliert.\n\nIch mentorierte einen Frontend Engineer im Team und etablierte ein Contribution-Modell, mit dem Entwickler aus anderen Teams das System sicher erweitern konnten. Die Akzeptanz steigerte ich durch Dokumentation, Office Hours und direkte Unterstützung."
       },
       "chiliDigital": {
         "company": "ChiliDigital",
@@ -109,6 +120,14 @@
     },
     "pills": {
       "react": "React",
+      "reactJs": "ReactJS",
+      "kotlin": "Kotlin",
+      "quarkus": "Quarkus",
+      "vite": "Vite",
+      "shadcn": "ShadCN",
+      "tailwindCss": "Tailwind CSS",
+      "ux": "UX / UI",
+      "rapidAgenticDevelopment": "Schnelle agentische Entwicklung",
       "typescript": "TypeScript",
       "javascript": "JavaScript",
       "nodeJs": "Node.js",
