@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-24T11:07:39.748Z",
+  "tags": [],
+  "photos": [
+    {
+      "source": {
+        "submittedPhotoPageUrl": "https://www.flickr.com/photos/davorkirbis/55315546599/in/album-72177720334032520/",
+        "photoId": "55315546599",
+        "albumId": "72177720334032520"
+      },
+      "curation": {
+        "displayTitle": "DSC05077",
+        "backstory": "",
+        "tagIds": [],
+        "altText": "A singer gestures at a microphone while two backing vocalists perform under blue stage lights.",
+        "order": 1,
+        "published": true
+      },
+      "generated": {
+        "canonicalPageUrl": "https://www.flickr.com/photos/davorkirbis/55315546599/",
+        "flickrTitle": "DSC05077",
+        "sourceFilename": "DSC05077",
+        "orientation": "landscape",
+        "images": {
+          "thumbnail": {
+            "url": "https://live.staticflickr.com/65535/55315546599_b1285266fa_b.jpg",
+            "width": 1024,
+            "height": 683
+          },
+          "full": {
+            "url": "https://live.staticflickr.com/65535/55315546599_f800830353_3k.jpg",
+            "width": 3072,
+            "height": 2048
+          }
+        },
+        "exif": {}
+      }
+    }
+  ]
+}
