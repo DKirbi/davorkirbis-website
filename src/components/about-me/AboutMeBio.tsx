@@ -53,7 +53,6 @@ export const AboutMeBio: FC<AboutMeBioProps> = () => {
             <IconBrandGithubFilled aria-hidden size={18} className="shrink-0" />
             {t("aboutMe.sketchFlow.label")}
           </a>
-          .
         </p>
         <p className="text-lg leading-relaxed">{t("aboutMe.sketchFlow.description")}</p>
       </CardContent>
