@@ -12,6 +12,7 @@ import { AboutMe } from "./routes/about-me";
 
 import { CV } from "./routes/cv";
 import { Work } from "./routes/work";
+import { WorkSketchFlow } from "./routes/work-sketchflow";
 import { Photos } from "./routes/photos";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -27,7 +28,14 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Navigate to="home" replace /> },
       { path: "home", element: <AboutMe /> },
-      { path: "work", element: <Work /> },
+      {
+        path: "work",
+        element: <Work />,
+        children: [
+          { index: true, element: <Navigate to="SketchFlowAI" replace /> },
+          { path: "SketchFlowAI", element: <WorkSketchFlow /> },
+        ],
+      },
       { path: "resume", element: <CV /> },
       { path: "photos", element: <Photos /> },
       { path: "*", element: <Navigate to="/en/home" replace /> },

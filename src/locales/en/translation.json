@@ -30,8 +30,8 @@
     "education": "Education"
   },
   "work": {
-    "title": "Work",
-    "placeholder": "This page is a work in progress."
+    "iframeTitle": "SketchFlow-AI showcase",
+    "missingUrl": "SketchFlow URL is not configured. Set VITE_SKETCHFLOW_URL."
   },
   "cvContent": {
     "experience": {

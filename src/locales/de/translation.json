@@ -30,8 +30,8 @@
     "education": "Ausbildung"
   },
   "work": {
-    "title": "Arbeiten",
-    "placeholder": "Diese Seite ist in Bearbeitung."
+    "iframeTitle": "SketchFlow-AI Showcase",
+    "missingUrl": "SketchFlow-URL ist nicht konfiguriert. Setze VITE_SKETCHFLOW_URL."
   },
   "cvContent": {
     "experience": {

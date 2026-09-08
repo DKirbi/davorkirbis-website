@@ -30,8 +30,8 @@
     "education": "Izobrazba"
   },
   "work": {
-    "title": "Delo",
-    "placeholder": "Ta stran je v pripravi."
+    "iframeTitle": "SketchFlow-AI predstavitvena stran",
+    "missingUrl": "URL za SketchFlow ni nastavljen. Nastavi VITE_SKETCHFLOW_URL."
   },
   "cvContent": {
     "experience": {
