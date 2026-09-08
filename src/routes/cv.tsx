@@ -7,7 +7,7 @@ import { ExperienceTimeline } from "@/components/ExperienceTimeline";
 /**
  * CV route — two-column layout with experience and education sections.
  *
- * No props — composes two `CvSection`s; titles + divider colors live here so
+ * No props — composes two `CvSection`s; titles + divider tokens live here so
  * adding a third section is a one-liner. `Record<string, never>` instead of
  * `interface Foo {}` because `@typescript-eslint/no-empty-object-type` flags
  * the latter.
@@ -19,10 +19,10 @@ export const CV: FC<CvProps> = () => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 w-11/12 max-w-5xl mx-auto pt-16">
-      <CvSection title={t("cv.experience")} dividerColor="cyan">
+      <CvSection title={t("cv.experience")} dividerClassName="bg-section-experience">
         <ExperienceTimeline />
       </CvSection>
-      <CvSection title={t("cv.education")} dividerColor="blue">
+      <CvSection title={t("cv.education")} dividerClassName="bg-section-education">
         <EducationTimeline />
       </CvSection>
     </div>

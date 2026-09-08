@@ -51,17 +51,11 @@ export type CvPillKey =
 export type ExperienceItem = {
   id: string;
   technologies: CvPillKey[];
-  /** Optional public project shown as a GitHub icon + label under the description. */
-  projectLink?: {
-    /** Absolute URL opened in a new tab. */
-    href: string;
-  };
 };
 
 export const experience: ExperienceItem[] = [
   {
     id: "sportradar",
-    projectLink: { href: "https://github.com/DKirbi/SketchFlow-AI" },
     technologies: [
       "reactJs",
       "kotlin",

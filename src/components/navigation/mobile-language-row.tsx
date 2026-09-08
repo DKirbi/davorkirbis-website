@@ -24,7 +24,7 @@ export const MobileLanguageRow: FC<MobileLanguageRowProps> = ({ currentLanguage,
           key={lang}
           onClick={() => onChange(lang)}
           className={`flex items-center justify-center h-[55px] w-[55px] rounded-md transition-opacity ${
-            isActive ? "opacity-100 ring-2 ring-neutral-500" : "opacity-60 hover:opacity-90"
+            isActive ? "opacity-100 ring-2 ring-primary" : "opacity-60 hover:opacity-90"
           }`}
           aria-label={`Switch language to ${language.label}`}
         >
