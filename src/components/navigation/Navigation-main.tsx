@@ -36,6 +36,7 @@ export const NavigationMain: FC<NavigationMainProps> = () => {
   // resolves them to `/en/home`, `/de/home`, etc. without any string concat.
   const navLinks: ReadonlyArray<NavLinkItem> = [
     { name: t("nav.aboutMe"), href: "home" },
+    { name: t("nav.work"), href: "work" },
     { name: t("nav.resume"), href: "resume" },
   ];
 

@@ -1,6 +1,7 @@
 {
   "nav": {
     "aboutMe": "About me",
+    "work": "Work",
     "resume": "Resume",
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
@@ -27,6 +28,10 @@
   "cv": {
     "experience": "Experience",
     "education": "Education"
+  },
+  "work": {
+    "iframeTitle": "SketchFlow-AI showcase",
+    "missingUrl": "SketchFlow URL is not configured. Set VITE_SKETCHFLOW_URL."
   },
   "cvContent": {
     "experience": {

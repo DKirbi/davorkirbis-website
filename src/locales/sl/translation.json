@@ -1,6 +1,7 @@
 {
   "nav": {
     "aboutMe": "O meni",
+    "work": "Delo",
     "resume": "Življenjepis",
     "openMenu": "Odpri meni",
     "closeMenu": "Zapri meni"
@@ -27,6 +28,10 @@
   "cv": {
     "experience": "Izkušnje",
     "education": "Izobrazba"
+  },
+  "work": {
+    "iframeTitle": "SketchFlow-AI predstavitvena stran",
+    "missingUrl": "URL za SketchFlow ni nastavljen. Nastavi VITE_SKETCHFLOW_URL."
   },
   "cvContent": {
     "experience": {
