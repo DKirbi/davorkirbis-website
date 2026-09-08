@@ -18,6 +18,5 @@ export const ExperienceTimeline: FC<ExperienceTimelineProps> = () => (
     i18nRoot="cvContent.experience"
     titleKey="company"
     subtitleKey="role"
-    badgeColor="cyan"
   />
 );

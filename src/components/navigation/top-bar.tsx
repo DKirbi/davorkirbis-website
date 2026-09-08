@@ -23,8 +23,6 @@ export interface TopBarProps {
   currentLanguage: SupportedLanguages;
   /** Forwarded to `RightControls`; same contract as `DesktopLanguageMenu.onChange`. */
   onLanguageChange: (language: SupportedLanguages) => void;
-  /** Color-scheme flag forwarded to the hamburger bars and the desktop language menu. */
-  isDark: boolean;
 }
 
 export const TopBar: FC<TopBarProps> = ({
@@ -33,7 +31,6 @@ export const TopBar: FC<TopBarProps> = ({
   onToggleMenu,
   currentLanguage,
   onLanguageChange,
-  isDark,
 }) => (
   <div className="nav-surface fixed left-0 w-full top-0 z-[999]">
     <div className="flex justify-center h-[54px] m-auto">
@@ -55,13 +52,12 @@ export const TopBar: FC<TopBarProps> = ({
             <RightControls
               currentLanguage={currentLanguage}
               onLanguageChange={onLanguageChange}
-              isDark={isDark}
             />
           </div>
         </NavLinkGroup>
 
         {/* Mobile hamburger trigger */}
-        <HamburgerButton open={menuOpen} onToggle={onToggleMenu} isDark={isDark} />
+        <HamburgerButton open={menuOpen} onToggle={onToggleMenu} />
       </div>
     </div>
   </div>

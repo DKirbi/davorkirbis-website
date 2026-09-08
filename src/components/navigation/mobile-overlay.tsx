@@ -17,8 +17,6 @@ export interface MobileOverlayProps {
   currentLanguage: SupportedLanguages;
   /** Forwarded to `RightControls`; same contract as `DesktopLanguageMenu.onChange`. */
   onLanguageChange: (language: SupportedLanguages) => void;
-  /** Color-scheme flag forwarded to `RightControls`. */
-  isDark: boolean;
 }
 
 export const MobileOverlay: FC<MobileOverlayProps> = ({
@@ -27,7 +25,6 @@ export const MobileOverlay: FC<MobileOverlayProps> = ({
   onClose,
   currentLanguage,
   onLanguageChange,
-  isDark,
 }) => (
   <div
     className={`nav-surface fixed inset-0 z-[998] flex flex-col items-center justify-center gap-8 transition-opacity duration-300 mobile:hidden ${
@@ -47,7 +44,6 @@ export const MobileOverlay: FC<MobileOverlayProps> = ({
     <RightControls
       currentLanguage={currentLanguage}
       onLanguageChange={onLanguageChange}
-      isDark={isDark}
       layout="mobile"
     />
   </div>

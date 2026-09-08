@@ -1,29 +1,15 @@
-$primary-color: #007493;
-
 .nav-link {
   font-size: 18px;
   padding: 4px 16px;
-  color: #4c4c4c;
+  color: hsl(var(--link));
   font-family: "Roboto Serif", serif;
-  &:hover {
-    color: $primary-color;
-
-  }
-  &.active {
-    font-weight:  700;
-    color: $primary-color;
-    
-  }
-}
-
-html[data-mantine-color-scheme="dark"] .nav-link {
-  color: #d1d5db;
 
   &:hover {
-    color: $primary-color;
+    color: hsl(var(--link-hover));
   }
 
   &.active {
-    color: lighten($primary-color, 10%);
+    font-weight: 700;
+    color: hsl(var(--link-active));
   }
 }
