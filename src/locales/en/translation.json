@@ -1,6 +1,7 @@
 {
   "nav": {
     "aboutMe": "About me",
+    "work": "Work",
     "resume": "Resume",
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
@@ -23,6 +24,10 @@
   "cv": {
     "experience": "Experience",
     "education": "Education"
+  },
+  "work": {
+    "title": "Work",
+    "placeholder": "This page is a work in progress."
   },
   "cvContent": {
     "experience": {

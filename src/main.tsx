@@ -10,6 +10,7 @@ import LangRoot from "./routes/root";
 import { AboutMe } from "./routes/about-me";
 
 import { CV } from "./routes/cv";
+import { Work } from "./routes/work";
 import { Photos } from "./routes/photos";
 import "@mantine/core/styles.css";
 import { Analytics } from "@vercel/analytics/react";
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Navigate to="home" replace /> },
       { path: "home", element: <AboutMe /> },
+      { path: "work", element: <Work /> },
       { path: "resume", element: <CV /> },
       { path: "photos", element: <Photos /> },
       { path: "*", element: <Navigate to="/en/home" replace /> },

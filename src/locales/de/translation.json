@@ -1,6 +1,7 @@
 {
   "nav": {
     "aboutMe": "Über mich",
+    "work": "Arbeiten",
     "resume": "Lebenslauf",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen"
@@ -24,6 +25,10 @@
   "cv": {
     "experience": "Berufserfahrung",
     "education": "Ausbildung"
+  },
+  "work": {
+    "title": "Arbeiten",
+    "placeholder": "Diese Seite ist in Bearbeitung."
   },
   "cvContent": {
     "experience": {

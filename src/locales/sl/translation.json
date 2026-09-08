@@ -1,6 +1,7 @@
 {
   "nav": {
     "aboutMe": "O meni",
+    "work": "Delo",
     "resume": "Življenjepis",
     "openMenu": "Odpri meni",
     "closeMenu": "Zapri meni"
@@ -23,6 +24,10 @@
   "cv": {
     "experience": "Izkušnja",
     "education": "Izobrazba"
+  },
+  "work": {
+    "title": "Delo",
+    "placeholder": "Ta stran je v pripravi."
   },
   "cvContent": {
     "experience": {
