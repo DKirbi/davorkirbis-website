@@ -12,13 +12,16 @@
       "role": "ein <strong>UX Engineer</strong>"
     },
     "subheading": "Brücken zwischen Design und Entwicklung durch skalierbare Interfaces und Design Systems.",
-    "experience": "",
     "ExperienceParagraph": {
-      "p1": "Aktuell arbeite ich als <strong>Product Designer</strong> bei <a>@Sportradar</a> mit Fokus auf konsistente, skalierbare Benutzeroberflächen für komplexe interne Produkte.",
-      "p2": "Zusätzlich zur Produktgestaltung dokumentiere ich UX- und UI-Patterns und überführe sie in praxisnahe Cursor/Copilot-Regel- und Skill-Frameworks, damit Frontend-Entwickler und Designer Low-Fidelity- und High-Fidelity-Prototypen für neue Tools und Features effizient erstellen können.",
-      "p3": "Zuletzt war ich parallel auch als <strong>Tech Lead und Design Technologist</strong> bei Sportradar tätig und verantwortete eine React-Komponentenbibliothek, die von einer großen internen Entwickler-Community genutzt wird. Ich betreue Engineers, definiere Komponenten-APIs und treibe Verbesserungen der Developer Experience voran — stets nah am Code."
+      "p1": "Offiziell arbeite ich als <strong>Full Stack Engineer</strong> bei <a>@Sportradar</a>, um die Produkte besser zu verstehen und die User Experience dort zu verbessern, wo es nötig ist.",
+      "p2": "Zuvor habe ich als <strong>Product Designer</strong> und als <strong>Tech Lead</strong> eines internen Design Systems gearbeitet — ich habe die UX interner Tools gestaltet und eine React-Komponentenbibliothek in einer großen Engineering-Organisation skaliert.",
+      "p3Lead": "Mein größter Erfolg ist"
     },
-    "hobbies": "Außerhalb des Berufs verbringe ich mich in Fotografie — ich fotografiere mit einer Sony Alpha 6000 und einer wachsenden Sammlung von APS-C Objektiven. Ich genieße auch Klettern, Videospiele und mein freier Zeit verbringe ich mit meiner kleinen Tochter.",
+    "sketchFlow": {
+      "label": "SketchFlow-AI",
+      "description": "Ein Low-Fidelity-UX-Patterns-Framework für agentisches Prototyping."
+    },
+    "hobbies": "Außerhalb der Arbeit fotografiere ich gerne — mit einer Sony Alpha 6000 und einer wachsenden Sammlung an APS-C-Objektiven. Ich bouldere und spiele auch gerne, und zurzeit verbringe ich viel Freizeit damit, die Welt gemeinsam mit meiner einjährigen Tochter zu entdecken.",
     "downloadResume": "Lebenslauf herunterladen",
     "fileSize": "(1.9 MB .PDF)"
   },
@@ -37,11 +40,7 @@
         "role": "Senior Software Engineer",
         "period": { "start": "Jan. 2026", "end": "Heute" },
         "highlight": "Im Transformers-Team helfe ich, Tools für unsere Dateneingabe-Interfaces zu bauen — und als sich die Prioritäten verschoben, wechselte ich in eine Full-Stack-Engineer-Rolle mit Kotlin und Quarkus.",
-        "description": "Ich arbeite im Transformers-Team und helfe, die Tools hinter unseren Dateneingabe-Interfaces zu bauen. Als sich die Team-Prioritäten verschoben, wechselte ich in eine Full-Stack-Engineer-Rolle und übernahm agentische Entwicklung mit Kotlin und Quarkus — und lieferte so über den gesamten Stack in einem engeren Takt. Ich trage weiterhin täglich in React und Vite bei und bringe UX- und UI-Urteilsvermögen in die Arbeit: präzisere Formularvalidierung, klarere Tooltip-Texte und Validierungsregeln, die über das Ticket hinausgehen, um Edge Cases abzudecken, die Operatoren tatsächlich treffen.\n\nWenn das Produkt es braucht, übernehme ich die UX- und UI-Arbeit weiterhin selbst. Das Stück, auf das ich am stolzesten bin, ist SketchFlow: Ich habe die UX- und UI-Patterns aus Produkten, die wir bereits ausgeliefert hatten, in ein Framework gegossen, das agentische Entwicklung auf Kurs hält. Modelle bleiben innerhalb der Regeln, die wir geschrieben haben, statt bei jedem Prompt ein anderes Produkt zu erfinden.\n\nIch habe ein konservatives Lo-Fi-Designsystem auf einer ShadCN-inspirierten Struktur mit Tailwind gebaut — Graustufen, zurückhaltend, dieselbe visuelle Sprache über alle Prototypen hinweg. Jahre von NDAs hielten die echte Arbeit von einem öffentlichen Portfolio fern. SketchFlow ist der Weg, sie trotzdem zu zeigen: den UX-Flow eines Features rekonstruieren, die Mock-Daten umwidmen, damit die Geschäftsidee privat bleibt, und das Interaktionsdesign trotzdem vor jeden stellen, der sehen will, wie ich denke.",
-        "projectLink": {
-          "label": "SketchFlow-AI",
-          "description": "Ein Low-Fidelity-UX-Patterns-Framework für agentisches Prototyping."
-        }
+        "description": "Ich arbeite im Transformers-Team und helfe, die Tools hinter unseren Dateneingabe-Interfaces zu bauen. Als sich die Team-Prioritäten verschoben, wechselte ich in eine Full-Stack-Engineer-Rolle und übernahm agentische Entwicklung mit Kotlin und Quarkus — und lieferte so über den gesamten Stack in einem engeren Takt. Ich trage täglich zu React und anderen Design Systems bei und bringe UX- und UI-Urteilsvermögen in die Arbeit: präzisere Formularvalidierung, klarere Tooltip-Texte und Validierungsregeln, die über das Ticket hinausgehen, um Edge Cases abzudecken, die Operatoren tatsächlich treffen."
       },
       "sportradarUx": {
         "company": "Sportradar d.o.o.",

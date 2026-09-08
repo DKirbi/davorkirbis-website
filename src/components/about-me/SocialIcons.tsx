@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { ThemeIcon } from "@mantine/core";
+import { Button } from "@/components/ui/button";
 import {
   IconBrandFlickr,
   IconBrandGithubFilled,
@@ -19,42 +19,37 @@ export type SocialIconsProps = Record<string, never>;
 
 const ICON_STYLE = { width: "70%", height: "70%" } as const;
 
+const socialLinks = [
+  {
+    href: "https://www.linkedin.com/in/davorkirbis/",
+    label: "LinkedIn",
+    icon: IconBrandLinkedin,
+  },
+  {
+    href: "https://www.flickr.com/photos/davorkirbis/",
+    label: "Flickr",
+    icon: IconBrandFlickr,
+  },
+  {
+    href: "https://github.com/DKirbi",
+    label: "GitHub",
+    icon: IconBrandGithubFilled,
+  },
+] as const;
+
 export const SocialIcons: FC<SocialIconsProps> = () => (
   <div className="icons-container flex flex-row gap-4 justify-center">
-    <a
-      href="https://www.linkedin.com/in/davorkirbis/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="LinkedIn"
-    >
-      <ThemeIcon size="lg" variant="filled">
-        <IconBrandLinkedin style={ICON_STYLE} stroke={1.5} />
-      </ThemeIcon>
-    </a>
-    <a
-      href="https://www.flickr.com/photos/davorkirbis/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Flickr"
-    >
-      <ThemeIcon size="lg" variant="filled">
-        <IconBrandFlickr style={ICON_STYLE} stroke={1.5} />
-      </ThemeIcon>
-    </a>
-    <a
-      href="https://github.com/DKirbi"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="GitHub"
-    >
-      <ThemeIcon size="lg" variant="filled">
-        <IconBrandGithubFilled style={ICON_STYLE} stroke={1.5} />
-      </ThemeIcon>
-    </a>
-    <a href="mailto:davor.kirbis@gmail.com" aria-label="Email">
-      <ThemeIcon size="lg" variant="filled">
-        <IconMailFilled style={ICON_STYLE} stroke={1.5} />
-      </ThemeIcon>
-    </a>
+    {socialLinks.map(({ href, label, icon: Icon }) => (
+      <Button key={label} asChild size="icon" className="h-10 w-10 rounded-md [&_svg]:size-[70%]">
+        <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
+          <Icon style={ICON_STYLE} stroke={1.5} />
+        </a>
+      </Button>
+    ))}
+    <Button asChild size="icon" className="h-10 w-10 rounded-md [&_svg]:size-[70%]">
+      <a href="mailto:davor.kirbis@gmail.com" aria-label="Email">
+        <IconMailFilled style={ICON_STYLE} />
+      </a>
+    </Button>
   </div>
 );

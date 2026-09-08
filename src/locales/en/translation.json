@@ -14,9 +14,13 @@
     "subheading": "Bridging design and engineering through scalable interfaces and design systems.",
     "hobbies": "Outside of work, I enjoy photography — I shoot with a Sony Alpha 6000 and a growing collection of APS-C lenses. I also like bouldering, gaming, and these days I spend a lot of my free time exploring the world together with my one-year-old daughter.",
     "ExperienceParagraph": {
-      "p1": "Today I work as a <strong>Product Designer</strong> at <a>@Sportradar</a>, focused on creating consistent, scalable user interfaces across complex internal products.",
-      "p2": "Alongside product design, I document UX and UI patterns and turn them into practical Cursor/Copilot rule-and-skill frameworks, enabling frontend developers and designers to produce low-fidelity and high-fidelity prototypes for new tools and features.",
-      "p3": "Most recently I've also operated as a <strong>Tech Lead and Design Technologist</strong> at Sportradar, owning a React component library adopted across a large internal developer community. I mentor engineers, define component APIs, and drive developer experience improvements — all while staying close to the code."
+      "p1": "Officially I work as a <strong>Full Stack Engineer</strong> at <a>@Sportradar</a>, so I can better understand the products and improve the user experience where needed.",
+      "p2": "In the past I have worked as a <strong>Product Designer</strong> and as <strong>Tech Lead</strong> of an internal Design System — shaping UX for internal tools and scaling a React component library across a large engineering organisation.",
+      "p3Lead": "My biggest achievement is"
+    },
+    "sketchFlow": {
+      "label": "SketchFlow-AI",
+      "description": "A low-fidelity UX patterns framework for agentic prototyping."
     },
     "downloadResume": "Download Resume",
     "fileSize": "(1.9 MB .PDF)"
@@ -36,11 +40,7 @@
         "role": "Senior Software Engineer",
         "period": { "start": "Jan 2026", "end": "Present" },
         "highlight": "On the Transformers team I help ship data-entry interfaces — and as priorities shifted, I moved into a Full Stack Engineer role with Kotlin and Quarkus.",
-        "description": "I work on the Transformers team, helping build the tools behind our data-entry interfaces. As team priorities shifted, I stepped into a Full Stack Engineer role and adopted agentic development with Kotlin and Quarkus — shipping across the stack in a tighter loop. I still contribute daily in React and Vite, carrying UX and UI judgment into the work: tighter form validation, clearer tooltip copy, and validation rules pushed past the ticket to cover edge cases operators actually hit.\n\nWhen the product needs it, I still take the UX and UI work myself. The piece I am proudest of is SketchFlow: I turned the UX and UI patterns from products we had already shipped into a framework that keeps agentic development on the rails. Models stay inside the rules we wrote, instead of inventing a different product every prompt.\n\nI built a conservative lo-fi design system on a ShadCN-inspired structure with Tailwind — grayscale, restrained, the same visual language across prototypes. Years of NDAs kept the real work off a public portfolio. SketchFlow is how I show it anyway: reconstruct the UX flow of a feature, retarget the mock data so the business idea stays private, and still put the interaction design in front of anyone who wants to see how I think.",
-        "projectLink": {
-          "label": "SketchFlow-AI",
-          "description": "A low-fidelity UX patterns framework for agentic prototyping."
-        }
+        "description": "I work on the Transformers team, helping build the tools behind our data-entry interfaces. As team priorities shifted, I stepped into a Full Stack Engineer role and adopted agentic development with Kotlin and Quarkus — shipping across the stack in a tighter loop. I contribute daily to React and other design systems, carrying UX and UI judgment into the work: tighter form validation, clearer tooltip copy, and validation rules pushed past the ticket to cover edge cases operators actually hit."
       },
       "sportradarUx": {
         "company": "Sportradar d.o.o.",

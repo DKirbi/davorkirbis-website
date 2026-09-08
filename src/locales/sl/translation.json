@@ -13,13 +13,17 @@
     },
     "subheading": "Povezujem design in inženiring uporabniških vmesnikov in design sistemov za boljšo uporabniško izkušnjo.",
     "ExperienceParagraph": {
-      "p1": "Trenutno delujem kot <strong>Product Designer</strong> pri <a>@Sportradar</a>, osredotočen na ustvarjanje konsistentnih in skalabilnih uporabniških vmesnikov za kompleksne interne produkte.",
-      "p2": "Poleg produktnega dizajna dokumentiram UX in UI vzorce ter jih pretvarjam v praktične Cursor/Copilot okvire pravil in skillov, da lahko frontend razvijalci in oblikovalci hitreje ustvarjajo low-fidelity in high-fidelity prototipe novih orodij in funkcionalnosti.",
-      "p3": "Vzporedno sem v zadnjem obdobju deloval tudi kot <strong>Tech Lead in Design Technologist</strong> pri Sportradarju, kjer sem vodil React knjižnico komponent, ki jo uporablja velika skupnost internih razvijalcev. Mentoriram inženirje, definiram API-je komponent in izboljšujem developer experience — vse to ob tesnem stiku s kodo."
+      "p1": "Uradno delujem kot <strong>Full Stack inženir</strong> pri <a>@Sportradar</a>, da bolje razumem produkte in kjer je treba izboljšam uporabniško izkušnjo.",
+      "p2": "V preteklosti sem deloval kot <strong>Product Designer</strong> in kot <strong>Tech Lead</strong> internega design sistema — oblikoval sem UX internih orodij in skaliral React knjižnico komponent v veliki inženirski organizaciji.",
+      "p3Lead": "Moj največji dosežek je"
+    },
+    "sketchFlow": {
+      "label": "SketchFlow-AI",
+      "description": "Ogrodje lo-fi UX vzorcev za agentno prototipiranje."
     },
     "downloadResume": "Prenesi življenjepis",
     "fileSize": "(1.9 MB .PDF)",
-    "hobbies": "Zunaj dela uživam v fotografiji — fotografiram s Sony Alpha 6000 in z rastočo zbirko APS-C objektivov. Uživam tudi v plezanju, video igrami, preostali čas pa preživljam z mojo družino."
+    "hobbies": "Zunaj dela uživam v fotografiji — fotografiram s Sony Alpha 6000 in z rastočo zbirko APS-C objektivov. Uživam tudi v balvanskem plezanju in videoigrah, v zadnjem času pa veliko prostega časa preživim z odkrivanjem sveta skupaj z enoletno hčerko."
   },
   "cv": {
     "experience": "Izkušnja",
@@ -36,11 +40,7 @@
         "role": "Senior Software Engineer",
         "period": { "start": "jan. 2026", "end": "Danes" },
         "highlight": "V ekipi Transformers pomagam ustvarjati orodja za vmesnike za vnos podatkov — ko so se prioritete spremenile, sem prevzel vlogo Full Stack inženirja s Kotlinom in Quarkusom.",
-        "description": "Delujem v ekipi Transformers, kjer pomagam graditi orodja za vmesnike za vnos podatkov. Ko so se prioritete ekipe spremenile, sem prevzel vlogo Full Stack inženirja in sprejel agentni razvoj s Kotlinom in Quarkusom — dostavo čez celoten stack v tesnejšem ritmu. Še vedno vsakodnevno prispevam v Reactu in Viteju ter v delo prinašam UX in UI presojo: tesnejšo validacijo obrazcev, jasnejša besedila tooltipov in validacijska pravila, ki gredo čez obseg ticketov, da pokrijejo robne primere, s katerimi se operaterji res srečajo.\n\nKo produkt to potrebuje, UX in UI delo še vedno prevzamem sam. Delo, na katerega sem najbolj ponosen, je SketchFlow: UX in UI vzorce iz produktov, ki smo jih že izdali, sem spremenil v ogrodje, ki drži agentni razvoj na tirnicah. Modeli ostanejo znotraj pravil, ki smo jih napisali, namesto da bi ob vsakem promptu izumili drug produkt.\n\nZgradil sem konservativen lo-fi design sistem na ShadCN-navdihnjeni strukturi s Tailwindom — sivine, zadržan, isti vizualni jezik čez prototipe. Leta NDA pogodb so pravo delo držala stran od javnega portfolia. SketchFlow je način, kako ga vseeno pokažem: rekonstruirati UX tok funkcionalnosti, preusmeriti mock podatke, da poslovna ideja ostane zasebna, in vseeno postaviti interakcijski dizajn pred vsakogar, ki želi videti, kako razmišljam.",
-        "projectLink": {
-          "label": "SketchFlow-AI",
-          "description": "Ogrodje lo-fi UX vzorcev za agentno prototipiranje."
-        }
+        "description": "Delujem v ekipi Transformers, kjer pomagam graditi orodja za vmesnike za vnos podatkov. Ko so se prioritete ekipe spremenile, sem prevzel vlogo Full Stack inženirja in sprejel agentni razvoj s Kotlinom in Quarkusom — dostavo čez celoten stack v tesnejšem ritmu. Vsakodnevno prispevam k Reactu in drugim design sistemom ter v delo prinašam UX in UI presojo: tesnejšo validacijo obrazcev, jasnejša besedila tooltipov in validacijska pravila, ki gredo čez obseg ticketov, da pokrijejo robne primere, s katerimi se operaterji res srečajo."
       },
       "sportradarUx": {
         "company": "Sportradar d.o.o.",

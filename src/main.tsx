@@ -1,9 +1,10 @@
 import "./i18n";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import "./styles/tokens.css";
 import "./index.scss";
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
-import { MantineProvider } from "@mantine/core";
+import { ColorSchemeProvider } from "@/lib/color-scheme";
 // Entry composes sibling routes; relative imports kept for brevity.
 // All cross-folder imports elsewhere use the `@/` alias.
 import LangRoot from "./routes/root";
@@ -12,7 +13,6 @@ import { AboutMe } from "./routes/about-me";
 import { CV } from "./routes/cv";
 import { Work } from "./routes/work";
 import { Photos } from "./routes/photos";
-import "@mantine/core/styles.css";
 import { Analytics } from "@vercel/analytics/react";
 
 // Routing: every page lives under `/:lang/...` so URLs are shareable. The
@@ -38,29 +38,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <MantineProvider
-      defaultColorScheme="light"
-      theme={{
-        primaryColor: "brand",
-        primaryShade: { light: 6, dark: 5 },
-        colors: {
-          brand: [
-            "#e1f4f9",
-            "#c6e6ef",
-            "#9fcfdd",
-            "#74b8cb",
-            "#4fa5bc",
-            "#3699b3",
-            "#25889f",
-            "#0f768a",
-            "#006777",
-            "#005866",
-          ],
-        },
-      }}
-    >
+    <ColorSchemeProvider>
       <RouterProvider router={router} />
       <Analytics />
-    </MantineProvider>
+    </ColorSchemeProvider>
   </StrictMode>,
 );

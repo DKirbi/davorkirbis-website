@@ -20,7 +20,7 @@ export interface PhotoCardProps {
 }
 
 export const PhotoCard: FC<PhotoCardProps> = ({ character }) => (
-  <div className="relative border-solid border border-cyan-500">
+  <div className="relative border-solid border border-primary">
     <img
       src={trimUrl(character.image)}
       alt={character.name}

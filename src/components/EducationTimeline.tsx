@@ -18,6 +18,5 @@ export const EducationTimeline: FC<EducationTimelineProps> = () => (
     i18nRoot="cvContent.education"
     titleKey="school"
     subtitleKey="degree"
-    badgeColor="blue"
   />
 );
